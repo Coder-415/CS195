@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2652/qh.py - Provides a dynamic port number and provides very clear instructions. Result is clear and works great. Good job!  
+/users/abrick/pr/231/2652/a5.py - Generates a dynamic port number as required and gives clear instructions. More spacing in output would be nice. Great work! 
+/users/abrick/pr/231/2652/4v.py - Looks like it generates a dynamic port number but number listed needs to be updated in placs. When I tried a curl, could not connect.
+/users/abrick/pr/231/2652/39.py - Fun and like the easter egg. Works well and you make it very clear. Looks like you put a lot of work into this, Chris. Only thing is age is 1 year off. Don't think you need current year + one. Otherwise, amazing!
+/users/abrick/pr/231/2652/3a.py - Very concise and easy to use. Code is simple but effective. Great job!
+/users/abrick/pr/231/2652/wp.py - Code does not run, gets stuck. Also, you need to get a dynamic server. See discussion notes. Reccomend you use socket.socket().
+/users/abrick/pr/231/2652/w5.py - Clear and easy to use. Impressed that you found and use the unicode for the similing emoji on top of changing the color for the last line and adding the crowns. Fantastic work!

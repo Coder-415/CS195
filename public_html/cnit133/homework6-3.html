@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Part 6-3</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 6 - Part 3">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 6 - Part 3">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework6-3.html">
+        <meta property = "og:description" content = "Homework 6 - Part 3">
+        
+        <!-- Created by Alexei Schnakenburg on November 8, 2021 -->
+        
+        
+        <script>
+            
+            function splitphonenumber(){
+                
+                var myPhoneNumber = document.getElementById("phone-number").value.split(/[\s-]/);
+                var myAreaCode = myPhoneNumber[0].replace(/[()]/g, "");
+                var myExchangeCode = myPhoneNumber[1];
+                var myLineCode = myPhoneNumber[2];
+
+                document.getElementById("result1").innerHTML = (myAreaCode + "\nArea Code");
+                document.getElementById("result2").innerHTML = (myExchangeCode + "\nExchange Code");
+                document.getElementById("result3").innerHTML = (myLineCode + "\nLine Code");                
+            }
+            
+        </script>
+  
+        <style>
+
+        </style>
+        
+        <link rel="stylesheet" href="Cnit133basic.css">
+    
+    </head>
+    
+    <body onload="myFunction1a();myFunction1b()">
+        
+        <div class = "header">
+            <h1>Part 3</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework6.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework6-1.html">Part 1 - Math Objects</a></li>
+            <li><a href="homework6-2.html">Part 2 - String Objects</a></li>
+        </ul>
+        
+        <section><h2>Part 3</h2></section>
+        
+        <form name = "myform" id = "myform">
+        
+            <table>
+                <tr>
+                    <td>Please enter in your phone number below:</td>
+                </tr>
+                <tr>
+                    <td><input type = "text" id = "phone-number" name = "phone-number" data-mask="(000) 000-0000" /></td>
+                </tr>
+            </table>
+            
+             <button type = "button" value = "SUBMIT" id = "submit" onclick ="splitphonenumber();">Submit</button>
+        
+        </form>
+        
+        <h3>Result</h3> 
+    
+        <textarea rows ="2" cols = "15" id = "result1" name = "result1" readonly></textarea>
+        <textarea rows ="2" cols = "15" id = "result2" name = "result2" readonly></textarea>
+        <textarea rows ="2" cols = "15" id = "result3" name = "result3" readonly></textarea>
+        
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    
+    
+    </body>
+    
+    </html>

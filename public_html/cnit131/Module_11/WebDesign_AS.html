@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!--  Created by Alexei Schnakenburg on
+        April 29, 2021 -->
+
+        <title>Responsive Web Diesgn</title>
+
+        <style>
+
+            /* '{}' define behaviors and definitions for CSS division points */
+
+            /* low resolution, 480px and below */
+            @media only screen and (max-width:480px){
+
+            body {
+
+                background-color: #ff9999;
+                font-family: "Times New Roman", "Times", serif;
+                }
+                
+                table,th,td{
+                    border:3px solid black;
+                }
+            }
+            /* medium resolution, 481px to 1023px */
+            @media only screen and (min-width: 481px){
+
+            body {
+
+                background-color: #336600;
+                font-family: "Arial", "Helvetica", sans-serif;
+                }
+                
+                  table,th,td{
+                    border:3px solid black;
+                }
+                
+            }
+            /* high resolution, 1024px or higher */
+            @media only screen and (min-width: 1024px){
+
+              body {
+
+                background-color: #cc66ff;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                }
+                
+                  table,th,td{
+                    border:3px solid black;
+                }
+                
+            }
+            
+            footer{
+                text-align: center;
+            }
+            
+            
+        </style>
+    
+    </head>
+
+    <body>
+        
+        <header>
+    
+        <h1 style="text-align: center">Welcome!</h1>
+        
+        </header>
+        
+        <section>
+            
+            <h2>My thoughts on cream flavors</h2>
+            
+            <table style ="width: 300px">
+                <tr>
+                    <td>Name</td>
+                    <td>Thoughts</td>
+                    <td>Picture</td>
+                <tr>
+                    <td style=background-color:#50b883>Mint Chip</td>
+                    <td>Probably my favorite</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/2020-04-27_18_23_07_A_spoonful_of_Friendly%27s_Mint_Chocolate_Chip_Ice_Cream_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/800px-2020-04-27_18_23_07_A_spoonful_of_Friendly%27s_Mint_Chocolate_Chip_Ice_Cream_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg" width="100" height="100" alt="Mint Chip ice cream"/>Picture property of <a href="https://commons.wikimedia.org/wiki/File:2020-04-27_18_23_07_A_spoonful_of_Friendly%27s_Mint_Chocolate_Chip_Ice_Cream_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg" style="color:blue" target="_blank">wikimedia.org</a></td>
+                </tr>
+                
+                <tr>
+                    <td style=background-color:#d0ba92>Vanilla</td>
+                    
+                    <td>Always a good fall back</td>
+                    
+                    <td>
+                        <img src="https://c.pxhere.com/photos/34/ee/ice_cream_ice_dessert_delicious_vanilla_ice_cream_vanilla-929895.jpg!d" width="100" height="100" alt="Vanilla ice cream"/>Picture property of <a href="https://in.pinterest.com/pin/762023199426035601/" style="color:blue" target="_blank">Pintrest.com</a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td style=background-color:#0072fa>Salty Black Licorice</td>
+                    <td>
+                        <ol>
+                            <li>awful</li>
+                            <li>disgusting</li>
+                            <li>might try again</li>
+                        </ol>
+                    </td>
+                    <td><img src="https://i.imgur.com/8xDdC8U.jpg" width="100" height="100" alt="Salty Black Licorice ice cream"/>Picture property of <a href="https://www.reddit.com/r/mkbhd/comments/ccqwca/got_something_new_for_marques_to_try/" style="color:blue" target="_blank">Imgur.com</a></td>
+                </tr>
+            </table>
+    
+        </section>
+        
+        <footer>
+        
+            <p><em>Created by Alexei Schnakenburg &copy;2021</em></p>
+        
+        </footer>
+        
+    </body>
+    
+</html>

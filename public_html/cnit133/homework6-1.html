@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Homework 6-1</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 6 - Part 1">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 6 - Part 1">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework6-1.html">
+        <meta property = "og:description" content = "Homework 6 - Part 1">
+        
+        <!-- Created by Alexei Schnakenburg on November 7, 2021 -->
+        
+        <script>
+            
+            function validatedate(){
+                
+                var numvalueprovided = document.getElementById("enteredvalue").value;
+                
+                var inputreq = /^[0-9]+[.]\d{4,}$/;
+                var inputcheck = numvalueprovided.match(inputreq);
+                
+                var roundedvalue = Math.round(numvalueprovided);
+                var sqrtvalue = Math.sqrt(numvalueprovided);
+                var roundedsqrtvalue = Math.round(sqrtvalue);
+                
+                var onedecimalround = parseFloat(numvalueprovided).toFixed(1);
+                var twodecimalround = parseFloat(numvalueprovided).toFixed(2);
+                var threedecimalround = parseFloat(numvalueprovided).toFixed(3);
+                                                                            
+                
+                function eraseText(){
+                    document.getElementById("questions").value = "";
+                    document.getElementById("answers").value = "";
+                }
+                
+                if (inputcheck != null) {
+                    document.getElementById("questions").value=(
+                        "You entered: " + 
+                        "\nThis rounds to: " + "\nRounded to the nearest tenths position: " + "\nRounded to the nearest hunderdths position: " + "\nRounded to the nearest thousandths position: " + "\nIts square root(rounded): ");
+                    document.getElementById("answers").value=(parseFloat(numvalueprovided).toLocaleString("en-US", {maximumSignificantDigits:17}) + "\n" + roundedvalue.toLocaleString("en-US") + "\n" + parseFloat(onedecimalround).toLocaleString("en-US") + "\n" + parseFloat(twodecimalround).toLocaleString("en-US") + "\n" + parseFloat(threedecimalround).toLocaleString("en-US") + "\n") + roundedsqrtvalue.toLocaleString("en-US");
+                    document.getElementById("falsevalueinput").style.visibility = "hidden";
+                    return true;
+                }    
+            
+                else {
+                    eraseText();
+                    document.getElementById("falsevalueinput").style.visibility = "visible";
+                    return false;
+                }
+             
+            }
+            
+             
+        </script>
+    
+        <link rel="stylesheet" href="Cnit133basic.css">
+
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Part 1</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework6.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework6-2.html">Part 2 - String Objects</a></li>
+            <li><a href="homework6-3.html">Part 3 - Regular Expressions</a></li>
+        </ul>
+        
+        <section><h2>Part 1: Math Objects</h2></section>
+                
+        <form name = "myform" id = "myform" method = "post">
+            <table>
+                <tr>
+                    <td>Please enter a number with at least four digits after the zero: </td>
+                    <td>
+                        <input type = "text" id = "enteredvalue" name = "enteredvalue" required>
+                    </td>    
+                </tr>
+            </table>
+            
+            <div style = "visibility:hidden ; color:red;" id = "falsevalueinput"><em>Please ensure  the value entered has the correct format, e.g., 3.1415</em></div>
+
+            <button type = "button" value = "SUBMIT" id = "submit" onclick ="validatedate();">Submit</button>
+            
+        </form>
+        
+        <br>
+
+        <textarea rows ="6" cols = "45" name="result" id="questions" readonly></textarea> 
+        <textarea rows ="6" cols = "25" name="result" id="answers" readonly></textarea>        
+    
+    </body>
+    
+    </html>

@@ -1,0 +1,1 @@
+#Write a program to lazily rewrap text from the filename passed so that it fits an 80 column window without breaking any words. Use a generator that yields the next lines of text, each containing as many words as possible.

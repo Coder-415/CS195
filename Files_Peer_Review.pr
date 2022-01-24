@@ -1,0 +1,7 @@
+2m - Good. I like how you provide all the data points. Might be cleaner with more spacing.
+cw - I like how you show the data points and then convert them. Your code is able to take in negatives but not floats.
+yz - Your formula is able to convert strings and gives the median, however, it cannot handle multiple modes. 
+rc - Sorry, but your code does not work. Looks like you forgot to define your 'isnumeric' variable. 
+2h - Ok, you were able to convert the strings, however, it was not able to handle negative values or float values.
+v7 - Your code was unable to handle multiple modes. This could have been a good reason to use an exception.
+fw - Great formatting, clean code, and very functional. Able to account for negatives and floats. Good job!

@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2646/7h.py - Really like the input feature. Needs more error proofing. Does not work or inform me of the issue if no file provided. Also, takes ages to load. Not sure if it even gives correct result, had to interupt.
+/users/abrick/pr/231/2646/2c.py - Saw other people used an input feature. Code runs and looks like you met the objective. Did not see any words cut off. Good job.
+/users/abrick/pr/231/2646/6j.py - Like how it runs without needing input, although, wish more flexibility. Looks like you met the objective. No words are cut off. 
+/users/abrick/pr/231/2646/tc.py - Sorry. Does not appear to function. Mentions an issue with the sys.argv portion.
+/users/abrick/pr/231/2646/nt.py - Works as required. No words cut off. Wish I could choose my own file, i.e., had an input function.
+/users/abrick/pr/231/2646/z6.py - Like that you did not clutter my computer and only did a range. Looks like none of the words are getting cut off. Good job. 
+/users/abrick/pr/231/2646/tf.py - Sorry, but it does not seem to be working. Looks like I get an index error relating to the sys.argv function.

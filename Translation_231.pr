@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2656/ra.py - Would be nice if you error proofed this and provided more description on the axis, but it looks to be working. 
+/users/abrick/pr/231/2656/j6.py - It produces output, but from secondary reference, it does not appear to be accurate. Not sure how it got to its result. Appreciate the error proofing. 
+/users/abrick/pr/231/2656/rd.py - Could do with some better formatting to make sure it does not run over 80 characters but results seem accurate and axis provides useful specifications. Also, would be nice to have error proofing. 
+/users/abrick/pr/231/2656/2y.py - Clean and clear. Good error proofing. Accurate results provides. Only thing is that values could be formatted to commas to indicate thousands. Good job overall!
+/users/abrick/pr/231/2656/k9.py - Very clear output and accurate results. Error proofing would be nice as would adding commas to indicate thousands. 
+/users/abrick/pr/231/2656/ie.py - Really like the use of a filler value if no input is given. Results are accurate and output is super clear. Minor note, might be nice to specify thousands by using commas. Otherwise, great job!!
+/users/abrick/pr/231/2656/k8.py - Very colorful. Results are accurate and very clear. Really like that you used error proofing with a default value. Only things I might suggest is formatting count with thousand placeholders and making sure text does not exceed 80 character width. Otherwise, fantastic job! 

@@ -1,0 +1,35 @@
+#Write a program to lazily rewrap text from the filename passed so that it fits an 80 column window without breaking any words. Use a generator that yields the next lines of text, each containing as many words as possible.
+
+#Think, what does this mean? 1.) What does he mean by lazily - does not construct an in-memory list, i.e., uses generator. 
+#We want to import text. We want to apply a generator to it. This will mean that it will process one line each time called because iterator. 
+#The function should recognize each word in the line and cut off iterate when word would get line past 80 characters. It will add this word to the next line. 
+
+
+import sys
+import textwrap
+
+def get_file ():
+	try:
+		i = (sys.argv[1])      
+	except IndexError:
+		i = input ("Please enter a file name: ")
+	try:
+		global f
+		f = open (i , "r")
+		f = f.readlines()
+		#print (f.read())
+	except FileNotFoundError:
+		print ("Please try again with a valid file name.")		 
+
+get_file()
+	
+def lazy_wrap(character_count):
+	word_list = textwrap.wrap(f.split, width = character_count)
+	for element in word_list:
+		yield element
+		
+
+
+print(next(lazy_wrap(80)))
+
+#print ([next(lz) for lines in range(25)])

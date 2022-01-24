@@ -1,0 +1,7 @@
+ip - Could use better error proof. Does not work whether file is entered or not.
+86 - Appreciate the notification if not file is entered. You could hard open the file as a backup. 
+xm - Code still processes if no file is entered but value provided is incorrect. You need to make your regex function greedy bu adding max.
+id - You can just do file = open. You were supposed to use a regex funcion. Code did not work. 
+x5 - Code does not work, you used a variable which was not defined. Also, you should use max(findall) and not search for regex.
+iq - Need error proofing in case no file is entered. Your code also did not provide the correct answer. Think about using max(findall).
+de - Liked that you used error proofing in case no file was entered. You should split the lines before you use findall. Also, you probably want to use max(findall).

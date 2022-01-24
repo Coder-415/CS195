@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2655/wh.py - Very good. Did a better job than I. Good job with your dictionary creation. Good is very concise. Taking notes.
+/users/abrick/pr/231/2655/va.py - Not exactly correct, sorry. Had the same issue with Austria populating each output initially. Also, would be nice to have a placeholder in case no file is entered. 
+/users/abrick/pr/231/2655/jf.py - Like how clear your error notification is, but would be nice to have a backup file. Result is not correct as Austria is merged with each file. Had the same issue initially. 
+/users/abrick/pr/231/2655/dh.py - Code does not work, sorry. Not able to access the sample file. 
+/users/abrick/pr/231/2655/s6.py - Creates correct file type but needs to take out Austria from each entity. Also, advised to use a backup in case no command line argument is given. 
+/users/abrick/pr/231/2655/im.py - Sorry but this is just a mess. For one, Austria needs to not be included. Second, hard to tell but does not look like the proper format. Also, use a backup in case no command line file is given.
+/users/abrick/pr/231/2655/qh.py - I get a FileExistsError when I try a sample file. Cannot tell if it works or not. Reccomend you use a sample file as a backup. 

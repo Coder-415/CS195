@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Part 1</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 5 - Part 1">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 5 - Part 1">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework5-2.html">
+        <meta property = "og:description" content = "Homework 5 - Part 1">
+        
+        <!-- Created by Alexei Schnakenburg on October 25, 2021 
+
+        Conditions:
+        - Must have a form 
+            - includes input text box
+            - includes radio button
+            - includes checkboxes
+            - includes select items 
+        - Script that executes form validation
+            - validates that user has entered data in all the inputs (text box,radio button,etc.)
+        - Submit button to invoke the validation script and then process the form 
+        - Display a message to the user if a field is invalid 
+            - Do not clear out the whole entire form unless all the fields would have error messages associated with them, not for just one field
+
+    "In your form statement, use method="post" and an action that can be a mailto or a webpage(displaying that the form has been processed), but be sure to use input type="submit" for your submit button. Alternatively you can leave out the form's action and method, but then you should use an input type="button", along with displaying any appropriate messages."
+
+-->
+        
+        <script>        
+            
+                function validateName() {
+                    
+                    var myname = document.getElementById("name");
+                    var letters = /^[A-Za-z]+$/;
+                    
+                    if (myname.value.match(letters)){
+                    }
+                    else{
+                        alert("Please enter a valid name");
+                        return false;
+                        }
+                    }
+            
+                function validateBoxes(){
+                                        
+                    var ic1 = document.getElementById("mycheckbox1").checked;
+                    var ic2 = document.getElementById("mycheckbox2").checked;
+                    var ic3 = document.getElementById("mycheckbox3").checked;
+                    var ic4 = document.getElementById("mycheckbox4").checked;
+                    var ic5 = document.getElementById("mycheckbox5").checked;
+
+                    
+                    if (ic1 == true || ic2 == true || ic3 == true || ic4 == true || ic5 == true){
+                        return true;
+                    }
+                    else{
+                        document.getElementById("chk_option_error").style.visibility = "visible";
+                        return false;
+                    }
+                    
+                }
+                    
+
+        </script>
+
+  
+        <style>
+            
+            
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Part 1</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework5.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework5-2.html">Part 2 - Pulldown Event Handler</a></li>
+            <li><a href="homework5-3.html">Part 3 - User Input Using Two-Dimensional Array</a></li>
+        </ul>
+        
+        <section>
+            <h2>Content Below:</h2>
+            <hr>
+        </section>
+        
+        <form name = "myform" id="myform" onsubmit="return validateBoxes() && validateName(); " action="https://hills.ccsf.edu/~aschnake/cnit133/homework5-1a.html" method="post">            
+        
+            <table>
+             
+                <tr>
+                <td>Please Enter Your First Name: </td>
+                <td><input type = "text" name = "Item 1" size= "10" id = "name" required></td>
+                </tr>
+            
+            </table>
+            
+            <table>
+                
+                <tr>
+                    <td>Please Select Your Favorite Season:</td> 
+                </tr>
+            
+                <tr>
+                    <td>
+                    <input type = "radio" id = "myradio1" name = "Item2" value = "Spring"  required>
+                          <label for = "myradio1">Spring</label>
+                    </td>
+                  
+                </tr>
+                
+                <tr>   
+                    <td>
+                    <input type = "radio" id = "myradio2" name = "Item2" value = "Summer" required>
+                              <label for = "myradio2">Summer</label>
+                    </td>
+              
+                </tr>
+                
+                <tr>
+                    <td>
+                    <input type = "radio" id = "myradio3" name = "Item2" value = "Fall" required>
+                             <label for = "myradio3">Fall</label>
+                    </td>
+               
+                </tr>
+                
+                <tr>
+                    <td>
+                    <input type = "radio" id = "myradio4" name = "Item2" value = "Winter" required>
+                          <label for = "myradio4">Winter</label>
+                    </td>
+                  
+                </tr>
+            
+            </table>
+            
+            <table>
+                
+                <tr>
+                    <td>Which Of These Ice Cream Flavors Do You Like (can select multiple)?: </td>
+                
+                </tr>
+                
+
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox1" name = "icecream1" value = "Vanilla">
+                        <label for = "mycheckbox1">Vanilla</label>
+                    </td>
+                </tr>
+
+               <tr>
+                    <td><input type = "checkbox" id = "mycheckbox2" name = "icecream2" value = "Chocolate">
+                        <label for = "mycheckbox2">Chocolate</label>
+                    </td>
+                </tr>
+
+               <tr>
+                    <td><input type = "checkbox" id = "mycheckbox3" name = "icecream3" value = "Cookies & Cream">
+                        <label for = "mycheckbox3">Cookies &#x26; Cream</label>
+                   </td>
+                </tr>
+
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox4" name = "icecream4" value = "Mint Chocolate Chip">
+                        <label for = "mycheckbox1">Mint Chocolate Chip</label>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td><input type = "checkbox" id = "mycheckbox5" name = "icecream5" value = "None of the Above">
+                        <label for = "mycheckbox1">None of the Above</label>
+                    </td>
+                </tr>
+            
+            </table>
+            
+            <div style = "visibility:hidden ; color:red;" id = "chk_option_error">Please select at least one ice cream flavor option.</div>
+            
+            <table>
+                
+                <tr>
+                    <td>Which Month Were You Born?:</td>
+                    <td>
+                        <select id ="months" name="months" required>
+                            <option value = "">---</option>
+                            <option value = "January">January</option>
+                            <option value = "February">February</option>
+                            <option value = "March">March</option>
+                            <option value= "April">April</option>
+                            <option value= "May">May</option>
+                            <option value= "June">June</option>
+                            <option value= "July">July</option>
+                            <option value= "August">August</option>
+                            <option value= "September">September</option>
+                            <option value= "October">October</option>
+                            <option value= "November">November</option>
+                            <option value= "December">December</option>
+                        </select>
+    
+                    </td>
+                </tr>
+            
+            </table>
+            
+            <input type = "submit" value = "SUBMIT">
+            <input type = "reset" value = "RESET">
+        
+        </form>
+        
+        
+    
+    </body>
+    
+    </html>

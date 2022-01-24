@@ -1,0 +1,7 @@
+2e - This works. Like that you used a dictionary. Good way to remove duplicative values. You may want to proofread your spelling.
+t8 - Ok. Might have been a good idea to remove duplicative values uisng a dictionary or set.
+5w - Good. I like that you used a dictionary to remove the duplicative values. You may want to add error proofing in case no values are entered.
+g5 - Fine. I think it may be clearer with some text indicating what is being displayed. Also, you may want to remove duplicates using a dictionary or set.
+yi - I liked that you had error proofing in case no values were entered. You could think about removing duplicates, currently printed uppercase multiple times.
+99 - Might be good to have some text both to describe what is being displayed and instruct user to enter values if none entered. Also, duplicates are printed multiple times.
+cj - You could add a message if no values are entered and use a dictionary or set to remove duplicates. Also, might be cleaner to break up list using ''.join.  

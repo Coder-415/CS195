@@ -1,0 +1,211 @@
+What is a computer network?
+A computer network is a collection of computers that can send messages to each other. Messages, like everything handled by a computer, are transmitted in binary.
+
+In this class, we're going to be focusing specifically on packet switching networks. In a packet switching network, messages are often broken up into pieces called packets. (Sometimes, a message does not need to be broken up, in which case it is sent as a single packet.) Each packet in a message is then sent to its intended recipient.
+
+Small Network Example
+
+A simple, small example of a computer network might be a pair of computers in close physical proximity connected by a cable. Each computer can send a message to the other computer by transmitting a sequence of bits through the cable. The maximum number of bits per unit time one computer can send to the other on this network is known as the network's bandwidth. The amount of time required between a message being sent and that same message being received is known as latency. As you can imagine, people generally want their computer networks to have high bandwidth and low latency.
+
+Each computer in this network would be described as an endpoint. This is a device on a network that sends and receives messages as opposed to relaying messages on behalf of someone else (more on that later). The cable that allows the computers to communicate is the transmission medium.
+
+This network would probably be described as a Local Area Network (LAN) for a couple reasons: (1) it only includes computers within a restricted geographic area, and (2) its endpoints and transmission media are controlled locally.
+
+Slightly Bigger Network Example
+
+Now, let's say you have five computers. Again, these computers are in close physical proximity. In this situation, you plug each computer into a central router. Each computer can then send a message to any of the other four computers by transmitting the message to the router, along with an indicator of who the intended recipient is. The router can then forward the message to the correct computer.
+
+(Note: I'm using the word router here, and I'll continue to do so in this class, but technically, there are a few different devices that all perform roles similar to what I describe: routers, switches, and hubs. You can read more about the distinctions between these devices here (Links to an external site.)Links to an external site..)
+
+If this router is any good, ideally, it can handle the case where two computers try to send a message at once. It will have enough memory to temporarily store up to a certain number of messages such that they all can be forwarded eventually.
+
+Note that there is no dedicated cable between any pair of computers on this network. Rather, each computer has a cable that plugs into the central router, and each computer shares the router in order to send messages to each other.
+
+Terminology Review
+
+computer network
+packet switching network
+packet
+bandwidth
+latency
+endpoint
+transmission medium
+Local Area Network (LAN)
+router
+ 
+
+What is the internet?
+The internet isn't much more than a massive network of computers. The endpoints on the internet come in a bunch of different forms, some of which we'll discuss later. They can include:
+
+desktop computers
+laptops
+smartphones
+tablets
+web servers
+televisions
+The transmission media also come in a bunch of different forms. A few examples are:
+
+fiber optic cable
+copper wire
+radio waves
+It wouldn't be great if every single endpoint on the internet plugged into a single router, as was the case in the last example. Instead, there are many interconnected routers scattered throughout the world that help route messages from one endpoint to another. This means that when you send a sequence of packets, each packet probably makes several stops at routers on its way to its final destination. Each packet might also take a different route.
+
+Internet Addresses
+
+In order for a router to correctly send your packet in the correct direction, it needs to have some sense of where the packet's destination is. Each endpoint on the internet is given something called an IP address for this purpose. An IP address is a collection of numbers that identifies a device's location on the internet. Routers equip themselves with lookup tables that help them forward packets in the correct direction based on the destination IP address.
+
+An IP version 4 (IPv4) address looks something like this:
+
+172.98.101.2
+It contains four numbers (each between 0 and 255) separated by dots. Whenever you connect to the internet, you are given one of these so that messages can be sent to your computer.
+
+Often, computers on the internet need to request information from other computers. (As we'll see in a second, you are actually making a request when you visit a webpage.) In certain contexts, computers on the internet can be put into two categories: clients (computers that make requests) and servers (computers that receive and respond to requests).
+
+Sometimes, computers can share information with each other on a more equitable basis. These computers can be part of a peer-to-peer network. In this type of network, each computer can be both a client and a server, depending on the situation. It's possible, for example, that computer 1 requests information from computer 2, and that later, computer 2 requests information from computer 1. Initially, computer 1 is the client and computer 2 is the server. Later, computer 2 is the client and computer 1 is the server. Since neither computer is fully a "client" or a "server", the two computers (and other computers on the network) are called peers.
+
+Example: Web Browsing
+
+Whenever you browse the web, you are actually sending and receiving messages through the internet. When you type "google.com" into your web browser and hit the enter key, your browser formulates a message to a server belonging to Google. Your computer (the client, in this case) and Google's server both have IP addresses. When your browser's message is divided into packets, each packet must have BOTH your IP address AND the IP address of Google's server.
+
+When Google receives your message, it sends a response. Its response is also broken into packets. Each packet has the same IP addresses as your packets did, but in the opposite order. Google's IP address is now the source, and your IP address is the destination.
+
+Terminology Review
+
+IP address
+client
+server
+peer-to-peer network
+ 
+
+Protocols
+In order for computers to communicate successfully over a network, their communications need to follow certain rules. Sets of rules for network communication are called protocols. As we'll see later, when you browse the web, you are actually obeying multiple protocols at once.
+
+Certain protocols are concerned just with what kinds of messages you can send to another computer or server on the internet, without saying anything about how those messages get where they need to go. Other protocols are concerned only with each message's journey, without any concern for what the messages actually contain. Protocols are divided into protocol layers (or categories) depending on what they care about.
+
+Background: URLs
+
+Before we dive into protocols, let's first look at the thing you type into your browser: a URL (Uniform Resource Locator). A URL might look something like this:
+
+https://en.wikipedia.org/wiki/Grace_Hopper
+A URL can be divided into several components. The part before :// (in this case, https) is the protocol. (HTTPS is actually one of the protocols we'll look more closely at in a future section.)
+
+After the :// but before the next /, we have the domain name (in this case, en.wikipedia.org). A domain name is a human-readable identifier for a webpage. Other examples include facebook.com and maps.google.com. Domain names can actually be further divided into pieces. The TLD (Top-Level Domain) is the last piece, including and after the last dot (in the Wikipedia example, .org). Some examples of TLDs include .com, .org, .gov, and .edu. Whatever occurs to the left of the TLD is the subdomain (google, wikipedia, etc.). You can also have sub-subdomains. For example, in the URL above, we are accessing the en subdomain of wikipedia, which itself is a subdomain of the .org TLD.
+
+Finally, everything after the domain name is called the path. (Technically, there are subdivisions within the path, but for now, we'll just call this whole component the path.)
+
+DNS - What's Your IP Address?
+
+When you want to send packets to a web server, you need to know its IP address. Browsing the web would be a huge pain if you had to remember the IP address of every website you wanted to visit. Fortunately, there's a system that will translate from domain name to IP address for you: DNS (Domain Name System). There are servers whose job it is to respond to DNS lookup requests. These requests go something like, "Hey, what is the IP address of google.com?" (For now, assume that your computer automatically knows the IP addresses of these servers.)
+
+With DNS servers on your team, you only have to remember the much more human-readable domain name of a website. A DNS server can translate the domain name into the more computer-readable IP address that corresponds to it. You can then send packets equipped with the correct IP address.
+
+HTTP - The "Surfing the Web" Protocol
+
+Let's continue with the example where you type "google.com" into your browser, press enter, and see Google's homepage appear. The message you send to Google needs to obey the rules of a protocol called HTTP (HyperText Transfer Protocol). The response that Google sends you also needs to obey HTTP.
+
+If you are a client following HTTP, there are only a few types of messages you can send a server. I'll only discuss a couple types here: GET requests and POST requests.
+
+A GET request looks something like this:
+
+GET /wiki/Grace_Hopper HTTP/1.1
+...
+...
+(The first line is obviously the important one.) The client's message must start with the word "GET" in all capitals. After the word GET is the path. (If you visit the homepage of a website, like https://google.com, the path is just a slash, even if a slash doesn't appear in the URL.) Finally, the first line includes the version of HTTP being used. In this case, we are using version 1.1. The request can optionally include more information after the first line, such as what device the client is or what language the client prefers.
+
+When you visit a website, either by typing the URL into your browser or by clicking a link, chances are pretty good that your browser is making a GET request.
+
+A POST request is similar. The main difference is that it is generally used in situations where the client needs to send information to the server. For example, when you fill out a form online and click "Submit", that probably generates a POST request.
+
+A POST request looks something like this:
+
+POST /wiki/Grace_Hopper HTTP/1.1
+...
+...
+
+data to submit...
+...
+The first line looks similar to the first line of a GET request. There are also optional subsequent lines immediately after which can contain information about the client. A POST request then includes a blank line, followed by the data being submitted. If this request were generated by someone filling out a form, this second section after the blank line would be where you'd find the information entered into the form.
+
+There are also rules about what the server's response should look like. (So many rules!) When a server responds to your request, the first line often looks something like this:
+
+HTTP 200 OK
+The number in the middle is the status code. After the status code is a brief message summarizing the status of the response. In this case, the server is telling us that it was able to process and respond to our request without problems.
+
+In the case of a successful request/response, we can expect to find HTML (HyperText Markup Language) somewhere after that first line. This is the code that makes webpages. Our browser can interpret it and display it as a webpage.
+
+Ok, a little bit more about the response code: different codes mean different things. A code that starts with a 2 (like 200) generally mean everything was successful. Codes that start with 3 are often used for redirects. Codes that start with 4 mean that the client did something wrong. (You've probably seen HTTP 404: Not Found.) Codes that start with a 5 mean that the server did something wrong.
+
+TCP - Did You Get My Message?
+
+The packets that you send and receive when surfing the web also probably obey a protocol called TCP (Transmission Control Protocol). The rules of TCP are (roughly) as follows:
+
+If you receive a packet, you must send an acknowledgement (a packet that just says, "I got your packet!").
+If you send a packet and don't get an acknowledgement, you should re-send it.
+BUT you shouldn't re-send too often. If a packet doesn't seem to be going through, wait for longer and longer intervals before each re-send. This is called backoff.
+Include some information in the packet about which packet it is (i.e. "This is packet number 3 out of 5 for this message.").
+Include a checksum in each packet. This is basically a number that both the sender and the recipient can generate based on what the packet contains. If the checksums match, that means the contents of the packet were probably not changed on the packet's journey.
+IP - What's Your Address?
+
+IP (Internet Protocol) is the set of rules around addressing and routing through the internet. The things you should remember about IP are:
+
+Each computer on the internet is given an IP address to identify its location.
+Each packet using IP must have both the source IP address and the destination IP address.
+Lower Level Protocols
+
+Finally, there are lower level protocols that govern how packets are transmitted between two adjacent devices (two routers connected to each other, for instance). These protocols don't care about the packet's whole journey, but rather a single leg of the packet's journey.
+
+These protocols generally require the source and destination hardware address to be included in the packet. A hardware address is a unique identifier for a computer that never changes. (Your IP address, by contrast, can change depending on where you decided to connect to the internet - school, your house, a cafe, etc.). In this case, the source hardware address is the hardware address of the computer the packet was sent from most recently, which is NOT necessarily the computer that originally sent the packet. Similarly, the destination hardware address is the hardware address of the computer the packet will arrive at next, which is NOT necessarily the computer the packet is ultimately bound for. (Quick note on terminology: when I say "computer", I could mean your computer, a server, or a router.)
+
+One example of a lower level protocol is Ethernet. This protocol is used for communication between two devices (computers/servers/routers) that have a physical cable between them.
+
+A couple other examples are WiFi and Bluetooth. These don't use a physical connection. Two devices that are close enough can communicate via radio waves using one of these protocols.
+
+Protocol Layers
+
+As was previously mentioned, protocols are often divided into layers based on what they are concerned with. HTTP, for instance, is an application layer protocol. Application layer protocols generally govern the actual message someone sends. They generally don't care about how the message gets where it's going. SFTP (Secure File Transfer Protocol) is another example of an application layer protocol.
+
+TCP is a transport layer protocol. It is concerned with the departure, arrival, ordering, and integrity of packets, but it doesn't care about what route they take or what message they contain. Other transport layer protocols are similar, though there can be some differences.
+
+IP is an internet/network layer protocol. These protocols are concerned with the location of the source and destination, and with the route a packet takes from one to the other.
+
+Ethernet, WiFi, and Bluetooth are all examples of link layer protocols. These protocols govern the transmission of information between two adjacent devices (with no intermediary).
+
+Analogy: USPS
+
+Whew, that was a ton of information. Let's imagine for a second that instead of trying to send a group of packets, we're trying to send a collection of packages - three packages, to be exact.
+
+The contents of the packages are like the application layer protocol contents. If we are doing some sort of web communication, these packages might hold an HTTP message of some sort. If we are a client, the packages might hold an HTTP request, like a GET request or a POST request. If we are a server, the packages might hold an HTTP response with some HTML.
+
+Each package is labeled with a package number so that they can be reassembled in the correct order on the other side. Each package also has a label with a summary of its contents. These labels are like the TCP portion of a packet - the packet number and the checksum.
+
+Each package also has an address and a return address. This way, the postal system knows where to send them, and the recipient knows where to send a thank-you letter. These addresses are like IP addresses. Some number of post offices will route the packages according to their address, similar to how routers route packets based on their destination IP address.
+
+Finally, imagine that each package must have a label on it indicating what post office most recently sent it out into the world, and what post office will receive it next. These labels get changed by every post office the packages stop at. These labels are similar to the hardware addresses in a packet.
+
+If this were really like the internet, each of our three packages might take a different route through the postal system to arrive at its destination. In addition, we may have to accept the fact that one or more of the packages might not make it, in which case we have to remake the package and send it again!
+
+Terminology Review
+
+protocol
+protocol layer
+URL
+domain name
+TLD
+subdomain
+DNS
+HTTP
+GET request
+POST request
+HTML
+TCP
+acknowledgement
+backoff
+IP
+hardware address
+Ethernet
+WiFi
+Bluetooth
+application layer
+transport layer
+internet/network layer
+link layer

@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2645/qq.py - Function runs on and the yield does not seem to be working. Need an end to your While statement. Yield should produce one line per next.
+/users/abrick/pr/231/2645/8y.py - Very pythonic code. Like the formatting of your answer. Very cleat and easily changeable. Good job.
+/users/abrick/pr/231/2645/6j.py - Less than python code but gets the job done. Appreciate all of the comments. Think of using a list comp instead of a for loop.
+/users/abrick/pr/231/2645/h3.py - Something in the code took a while to run. Format of answer is not clear, needs to be sep =. Code is also not very clearly organized. 
+/users/abrick/pr/231/2645/8m.py - Clean code and very clean result presentation. Appreciate the exception management.
+/users/abrick/pr/231/2645/ew.py - Well organized answer. Not exactly sure why you chose to switch from asterisks to equal signs. Code could use iterators. Kind of manual.
+/users/abrick/pr/231/2645/tm.py - This does not answer the question. Sorry. Code is clean but good using an iterator. 

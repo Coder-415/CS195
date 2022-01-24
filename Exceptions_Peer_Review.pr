@@ -1,0 +1,7 @@
+ev - This gets the job done. Technically, mode could also be used to account for strings as well as integers. Appreciate the error proofing.
+dm - This works but could use some form of error proofing as opposed to allowing a statistics error to pop up. 
+vz - This gets weird results if you only enter in strings. While it should still be accounting for mode, median should not be.
+ze - You need some error proofing. Unclear error message pops up if you enter any non-integers into command prompt. 
+3v - Appreciate the accounting for multiple modes. You could technically say that strings could also have modes.
+fs - I like the setup in terms but it fails to account for bi- or multi-modal arguments.
+cp - I appreciate that you account for more than one mode but your code could use error proofing in the event of strings.

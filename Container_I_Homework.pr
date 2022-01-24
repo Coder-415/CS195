@@ -1,0 +1,9 @@
+#Write a program that prints out the command line arguments it receives, in reverse order from last to first
+
+cf - Very good. Really liked his/her use of input, while, and reverser functions. 
+9i - Simple and gets the job done. Has no error proofing/ message telling user to add argument if not present.
+gf - Really good. Code is very organized and commented.Appreciate the error proofing. I don't know if their way of listing the arguments vertically is the best way to display.
+mi - Good. Could have included some form of error proofing. Lots of data output by them listing arguments both in the list and vertically. 
+zm - Not sure what the message that pops up when no command line argument is entered is in reference to. Gets the job done but does not need to list the file name in output. 
+zv - Appreciate both the humor and use of error proofing. Code is compact and to the point. Very good. 
+iz - Error proofing could be better. Code does not appear to work. I run into a 'TypeError: must be str, not list'. Sorry. 

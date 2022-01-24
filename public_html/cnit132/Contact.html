@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    
+        <title>
+        
+            Contact
+        
+        </title>
+        
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name = "author" content= "Alexei Schnakenburg">
+        <meta name="description" content = "Contact Page">
+        <meta name="keywords" content = "CNIT 132, CCSF, SEO, HTML">
+        
+        <meta property = "og:title" content="Contact Page">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/cnit132/contact.html">
+        <meta property = "og:description" content = "Contact Information for Alexei Schnakenburg">
+        <meta property = "og:image" content= "https://hills.ccsf.edu/~aschnake/cnit132/favicon.png">
+        
+        <!-- Created by Alexei Schnakenburg on December 14, 2021 -->
+        
+        <style>
+            
+            .grid {
+                display:grid;
+                grid-template-columns: 15em auto;
+                grid-template-rows: auto;
+                margin: auto;
+                width: auto;
+                height: auto;
+            }
+        
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: forestgreen;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            
+            
+            a{
+                color:blue;
+            }
+            
+            .navigation {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background: #333333;
+            }
+            
+            .navigation ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+            
+            .navigation li{
+            }
+            
+            .navigation li a {
+                display: block;
+                color:white;
+                padding:16px;
+                text-decoration: none;
+            }
+                
+            .navigation li a:hover{
+                background-color: #111111;
+            }
+            
+            .main {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                background-color: #ffe8bc;
+            }
+            
+            .footer {
+                grid-row-start: 3;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                text-align: center;
+                background-color: forestgreen;
+            }
+            
+            h2 {
+                text-align: center;
+            }
+            
+            h3 {
+                padding-left: .5em;
+            }
+            
+            p {
+                padding-left: .5em;
+            }
+                 
+        </style>
+
+    
+    </head>
+    
+    <body>
+        <div class = "grid">
+
+            <div class = "grid-area header" id="Top">
+                <h1>Alexei Schnakenburg - CNIT 132</h1>
+            </div>
+
+            <div class = "grid-area navigation">
+                <ul>
+                    <li>
+                        <a href="homework1.html">Home</a>
+                    </li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MeetUp.html">MeetUp</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "grid-area main">
+                
+                <p><em>Please feel free to reach out to me either using the contact form below or by contacting on the email link at the bottom of the page. I also provided a link to my LinkedIn. Thank you!</em></p>
+
+                <form action = "mailto:alexeischnakenburg@gmail.com" method = "post" enctype = "text/plain" name = "myform">
+                    <h2>Contact Form</h2>
+                    <table>
+                        <tr>
+                            <td>Please Enter Your Full Name:</td>
+                            <td><input type = "text" name = "name" size = "35" required></td>
+                        </tr>
+                        <tr>
+                            <td>Please Enter Your Email Address:</td>
+                            <td><input type = "text" name = "email" size = "35" required></td>
+                        </tr>
+                       <tr>
+                            <td>Feel Free to Add a Messsage:</td>
+                           <td><textarea rows = "3" cols ="30" name = "comments"></textarea></td>
+                        </tr>
+                    </table>
+                    <input type = "submit" value="SUBMIT">
+                </form>
+                
+
+            </div>
+
+            <hr>
+
+            <footer id="bottom" class = "grid-area footer">
+                Created by Alexei Schnakenburg on 12/14/2021
+                
+                <p style="display:inline-block;padding: 15px">
+                    <a href="#Top">Top of the page</a>
+                    <a href="mailto:alexeischnakenburg@gmail.com">alexeischnakenburg@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/alexei-schnakenburg-947a3639/">LinkedIn</a>
+                </p>                
+
+            </footer>
+            
+        </div>
+    
+    </body>
+
+</html>

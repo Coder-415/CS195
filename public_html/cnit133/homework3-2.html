@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+
+    <head>
+        
+        <Title>Part 2</Title>
+        
+        <meta charset="utf-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 3 - Part 2">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta property = "og:title" content="Salesperson Income Calculator">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/cnit133/homework3-2.html">
+        <meta property = "og:description" content = "Salesperson weekly income calculator for CNIT 133">
+        <meta property = "og:image" content = "https://hills.ccsf.edu/~aschnake/cnit133/images/Comission" >
+        
+        <script>
+
+            function process(){
+
+                var number1, number2, number3, number4, num1, num2, num3, num4, commission_rate, tot1, tot2, tot3, tot4, tot_all, commission;
+
+                number1 = document.forms["myform"].elements["Item_1"].value;
+                number2 = document.forms["myform"].elements["Item_2"].value;
+                number3 = document.forms["myform"].elements["Item_3"].value;
+                number4 = document.forms["myform"].elements["Item_4"].value;
+
+                num1 = parseInt(number1);
+                num2 = parseInt(number2);
+                num3 = parseInt(number3);
+                num4 = parseInt(number4);
+                
+                commission_rate = (.09);
+                 
+                tot1 = (num1 * 239.99);
+                tot2 = (num2 * 129.75);
+                tot3 = (num3 * 99.95);
+                tot4 = (num4 * 350.89);
+                
+                tot_all = (tot1+tot2+tot3+tot4);
+          
+                commission = (commission_rate * tot_all);
+
+                                
+                if (Number.isNaN(num1) || Number.isNaN(num2) || Number.isNaN(num3) || Number.isNaN(num4))
+                    window.alert("ERROR - One of the values provided is not an integer. Please review the inputs and try again.");
+                else if (num1<0 || num2<0 || num3<0 || num3<0 || num4<0)
+                    window.alert("ERROR - One of the values provided is a negative number. Please review the inputs and try again.");   
+                else 
+                    document.forms["myform"].elements["#Sold_1"].value=(num1);
+                    document.forms["myform"].elements["#Sold_2"].value=(num2);
+                    document.forms["myform"].elements["#Sold_3"].value=(num3);
+                    document.forms["myform"].elements["#Sold_4"].value=(num4);
+                    document.forms["myform"].elements["Total_1"].value=("$" + tot1.toFixed(2));
+                    document.forms["myform"].elements["Total_2"].value=("$" + tot2.toFixed(2));
+                    document.forms["myform"].elements["Total_3"].value=("$" + tot3.toFixed(2));
+                    document.forms["myform"].elements["Total_4"].value=("$" + tot4.toFixed(2));
+                    document.forms["myform"].elements["Total_Sold"].value=("$" + tot_all.toFixed(2));
+                    document.forms["myform"].elements["Total_Weekly_Earnings"].value=("$" + (commission + 200).toFixed(2));
+
+            }
+        </script>
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+          $( function() {
+            $( document ).tooltip();
+          } );
+          </script>
+        
+    
+        <!-- Created by Alexei Schnakenburg on September 27, 2021 -->
+        
+        <style>
+        
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+              
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+            
+            .ui-tooltip, .arrow:after {
+                background: black;
+                border: 2px solid white;
+              }
+            
+            .ui-tooltip {
+                padding: 10px 20px;
+                color: white;
+                border-radius: 20px;
+                font: bold 14px "Helvetica Neue", Sans-Serif;
+                text-transform: uppercase;
+                box-shadow: 0 0 7px black;
+              }
+            
+            textarea{
+                text-align: right;
+            }
+      
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Homework 3 - Part 2</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework3.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework3-1.html">Part 1 - Grade Calculator</a></li>
+            <li><a href="homework3-3.html">Part 3 - Temperature Conversion</a></li>
+            <li><a href="homework3-4.html">Part 4 - Multiplication Game</a></li>
+        </ul>
+        
+        
+          <section>
+            <h2>Content Below:</h2>
+            <hr>
+        </section>
+        
+          <form name = "myform">
+            
+            <label for = "Salesperson"><b>Name of Salesperson: </b></label>
+            <input id = "Salesperson" name="Salesperson" title= "Please make sure that the salesperson's name is spelled correctly.">
+              
+            <p><b>Input the Number of Items Sold for Each Item Number:</b></p>
+              
+            <table>
+                
+                <tr>
+                <td>Item 1:</td>
+                <td><input type = "text" name = "Item_1" size = "10"></td>
+                </tr>
+                
+                <tr>
+                <td>Item 2:</td>
+                <td><input type = "text" name = "Item_2" size = "10"></td>
+                </tr> 
+                
+                <tr>
+                <td>Item 3:</td>
+                <td><input type = "text" name = "Item_3" size = "10"></td>
+                </tr> 
+                
+                <tr>
+                <td>Item 4:</td>
+                <td><input type = "text" name = "Item_4" size = "10"></td>
+                </tr>
+            </table>
+        
+            <br>
+
+            <input type = "button" onclick="process()" value="SUBMIT">
+            <input type = "reset" value = "RESET" onclick="location.reload();">
+              
+            <table>
+                <tr>
+                    <th>Item #</th>
+                    <th>Price</th>
+                    <th>Number Sold</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>$239.99</td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "#Sold_1" readonly></textarea>
+                    </td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "Total_1" readonly></textarea>
+                    </td>
+                </tr>          
+                <tr>
+                    <td>2</td>
+                    <td>$129.75</td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "#Sold_2" readonly></textarea>
+                    </td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "Total_2" readonly></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$99.95</td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "#Sold_3" readonly></textarea>
+                    </td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "Total_3" readonly></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>$350.89</td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "#Sold_4" readonly></textarea>
+                    </td>
+                    <td>
+                        <textarea rows = "1" cols = "30" name = "Total_4" readonly></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Amount Sold:</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                         <textarea rows ="1" cols = "30" name="Total_Sold" readonly></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Weekly Earnings:</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                         <textarea rows ="1" cols = "30" name="Total_Weekly_Earnings" readonly></textarea>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    
+    </body>
+    
+</html>

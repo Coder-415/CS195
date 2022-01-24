@@ -1,0 +1,13 @@
+ds - Good, but could be improved by using str.casefold() to account for cases. 'Hello' is listed before 'hallo', for example. Also, might want error proofing for if no values. 
+
+8e - Ok. Good job adding error proofing. I do not think the assignment asked us to split the values. Also, could be improved by using str.casefold() to account for cases. 'Hello' is listed before 'hallo', for example.
+
+64 - Good, you might want to useby str.casefold() to account for cases. 'Hello' is listed before 'hallo', for example. Also, might want error proofing for if no values.
+
+rg - Good, using str.casefold() would allow you to account for cases. 'Hello' is listed before 'hallo', for example. Also, might want error proofing for if no values.
+
+65 - Good, tink about using str.casefold() to account for cases. 'Hello' is listed before 'hallo', for example. Also, might want error proofing for if no values.
+
+qa - Needs work. Breaks up values which I do not think was asked for. Does not really suit the purpose designed for. Might want to consider error proofing as well.
+ 
+hd - Does not work. Has values already entered. Does not allow new values to be entered.  

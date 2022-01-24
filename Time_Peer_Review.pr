@@ -1,0 +1,11 @@
+/users/abrick/pr/231/2647/qd.py - Response is not very descriptive but seems to be accurate. Good job. Samrt using monthToNum function. Good taking advantage of standardized format.
+/users/abrick/pr/231/2647/3v.py - This was not the assignment. You showed current time since midnight and did not reference the file. It probably would have been helpful to rely on indexing given the standardized format.
+/users/abrick/pr/231/2647/e5.py - Sorry, code does not even run. Yes, I found this assignment hard myself. I saw other people took advantage of very carefully calculated indexing of the file + use of datetime.strptime.
+/users/abrick/pr/231/2647/52.py - Very descriptive. Clearly works. Really good job with the input functionality. Very smart use of datetime.strptime regarding '' and .find(). Amazing!
+/users/abrick/pr/231/2647/5h.py - Super clear result. Code is pretty concise. Smart use of indexing and .striptime. Not totally sure you needed to specify Log Datetime Format at the start.
+/users/abrick/pr/231/2647/j3.py - Result looks to be a float although don't think it is. Good use of strptime. Could have more explanation in your result.
+/users/abrick/pr/231/2647/fx.py - Result presents as a float and not much description as to what is being shown. Very pythonic code and meets objective. Great work!
+
+
+
+

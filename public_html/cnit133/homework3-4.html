@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+
+    <head>
+        
+        <Title>Part 4</Title>
+        
+        <meta charset="utf-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 3 - Part 4">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta property = "og:title" content="Multiplication Game">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/cnit133/homework3-4.html">
+        <meta property = "og:description" content = "Math game to help kids practice multiplication">
+        <meta property = "og:image" content = "https://hills.ccsf.edu/~aschnake/cnit133/images/Multiplication" >
+        
+        <script>
+                
+            function get_random() {
+                    num1 = Math.random()*10;
+                    num2 = Math.random()*10;
+                    correct_answer = (Math.round(num1) * Math.round(num2));
+                
+                    document.forms["myform"].elements["problem"].value=(Math.round(num1) + " times " + Math.round(num2) + "?");
+                
+                    document.forms["myform"].elements["answer"].value="";
+                
+                    document.forms["myform"].elements["input1"].value="";
+                
+            }
+                
+            function process(){
+                
+                    input1 = parseFloat(document.forms["myform"].elements["input1"].value); 
+
+                    if (Number.isNaN(input1))
+                         document.forms["myform"].elements["answer"].value=("ERROR - One of the values provided is not an integer. Please review the inputs and try again.");
+                    else if (input1 != correct_answer)
+                         document.forms["myform"].elements["answer"].value=("No. Please try again.");
+                    else
+                        document.forms["myform"].elements["answer"].value=("Very good!");
+                
+            }
+
+        </script>
+        
+        
+        <!-- Created by Alexei Schnakenburg on September 27, 2021-->
+        
+        <style>
+        
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+              
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Homework 3 - Part 4</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework3.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework3-1.html">Part 1 - Grade Calculator</a></li>
+            <li><a href="homework3-2.html">Part 2 - Commission Calculator</a></li>
+            <li><a href="homework3-3.html">Part 3 - Temperature Conversion</a></li>
+        </ul>
+        
+          <section>
+            <h2>Content Below:</h2>
+            <hr>
+        </section>
+        
+        <form name = "myform">
+    
+            
+            How much is <textarea rows = "1" cols = "20" name = "problem" readonly></textarea>
+            
+            <br><br>
+            
+            Type your answer here:
+            <textarea rows = "1" cols = "20" name = "input1" ></textarea>
+            
+            <br><br>
+
+            Did you get it right?:
+            <textarea rows = "3" cols = "30" name = "answer" readonly></textarea>
+            
+            <br><br>
+            
+
+            <input type = "button" onclick="get_random()" value="NEW QUESTION">
+
+            <input type = "button" onclick="process()" value="SUBMIT">
+
+            <input type = "reset" value = "RESET" onclick="location.reload();">
+              
+        
+        </form>
+    
+    </body>
+    
+</html>

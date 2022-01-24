@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Homework #5</title>
+    <meta name = "description" content="Homework #5 for CNIT 131H">
+    <script></script>
+</head>
+<body style = 
+      "background-image:url(images/grass.jpeg); background-color: #f9E4B7; background-repeat:no-repeat; background-size: 120% 10%;">
+    <header>
+        <h1 style="text-align: center;">Homework #5</h1>
+    </header>
+    <br>
+   
+    <script type="text/javascript">
+
+            /*
+            * World Populution Counter - By JavaScript Kit (http://www.javascriptkit.com)
+            * Based on code by Adam Brown
+            * This notice MUST stay intact for use
+            * Visit JavaScript Kit (http://www.javascriptkit.com) for this script and more
+            */
+
+function maind(){
+	startdate = new Date()
+	now(startdate.getYear(),startdate.getMonth(),startdate.getDate(),startdate.getHours(),startdate.getMinutes(),startdate.getSeconds())
+}
+
+
+function ChangeValue(number,pv){
+	numberstring =""
+	var j=0 
+	var i=0
+	while (number > 1)
+	 { 
+
+	    numberstring = (Math.round(number-0.5) % 10) + numberstring
+	    number= number / 10
+	    j++
+	    if (number > 1 && j==3) { 
+			numberstring = "," + numberstring 
+			j=0}
+	    i++
+	 }
+
+	 numberstring=numberstring
+
+if (pv==1) {document.getElementById("worldpop").innerHTML=numberstring }
+}
+
+
+function now(year,month,date,hours,minutes,seconds){       
+startdatum = new Date(year,month,date,hours,minutes,seconds)
+
+var now = 5600000000.0
+var now2 = 5690000000.0
+var groeipercentage = (now2 - now) / now *100
+var groeiperseconde = (now * (groeipercentage/100))/365.0/24.0/60.0/60.0 
+nu = new Date ()                
+schuldstartdatum = new Date (96,1,1)                            
+secondenoppagina = (nu.getTime() - startdatum.getTime())/1000
+totaleschuld= (nu.getTime() - schuldstartdatum.getTime())/1000*groeiperseconde + now
+ChangeValue(totaleschuld,1);
+
+
+timerID = setTimeout("now(startdatum.getYear(),startdatum.getMonth(),startdatum.getDate(),startdatum.getHours(),startdatum.getMinutes(),startdatum.getSeconds())",200)
+}
+
+window.onload=maind
+</script>
+
+Current world population (estimated): <span id="worldpop" style="font-weight: bold"></span>.
+        
+     
+
+<p style="font: normal 11px Arial">This free script provided by<br />
+<a href="http://www.javascriptkit.com">JavaScript Kit</a></p>
+<p>I chose to include the above script. It calculates the global population using a formula.</p>
+    
+    <section>
+       <hr>
+         <h2 style= "text-align: right; font-style: italic;">Due Date For This Assignment</h2>
+        <p style = "text-align: right">2/21/2021 at 11:59pm Pacific Time.</p>
+            <p>This assignment is worth 10 points.</p>
+        <hr></section>
+    <section>
+        <h3>Naomi Osaka Beats Jennifer Brady at Australian Open for Her 4th Grand Slam Title</h3>
+
+        <p><span style="font-size:22px;">Over</span> the weekend, the 23 year old Japanese-American tennis playr, Naomi Osaka, won the Australian Open. She fought an American in the final and won in straight sets. Osaka will vault in international tennis rankings as a result. This comes on the heels of her victory over Serena Williams in the Semifinals later last week. </p>
+        
+        <p> <span style="font-size:22px;">While </span>we are clearly seeing the old guard fall away on the women's side, old favorites continue to dominate in the men's. This Sunday, Novak Djokovic beat the Russian, Daniil Medvedev, in straight sets. This is Novak's 18th major title and his record 9th Austrialian Open title. Time will tell when newcomers will have their day on the men's side. </p><br>
+    </section>
+
+    <footer style="border:5px solid blue; background-image: url(images/wallpaper.jpeg);background-color: azure; background-repeat:repeat-x">
+    <p>To be, or not to be, that is the Question: </p>
+    <p>Whether ’tis Nobler in the mind to suffer
+        The Slings and Arrows of outragious Fortune, Or to take Armes against a Sea of troubles, And by opposing end them: to dye, to sleep </p>
+    <p>No more; and by a sleep, to say we end
+        The Heart-ake, and the thouſand Naturall ſhockes
+        That Flesh is heyre too? 'Tis a consummation
+        Deuoutly to be wiſh'd.</p> 
+    <p>To dye to sleepe,
+        To sleep, perchance to Dream; I, there's the rub,
+        For in that sleep of death, what dreams may come,
+        When we haue ſhufflel’d off this mortall coile, Muſt giue us pause. There's the respect
+        That makes Calamity of long life:</p>
+    <p>For who would beare the Whips and Scornes of time,
+        The Oppreſſors wrong, the poore mans Contumely, The pangs of diſpriz’d Loue, the Lawes delay, The inſolence of Office, and the Spurnes That patient merit of the unworthy takes, When he himſelfe might his Quietus make With a bare Bodkin? Who would theſe Fardles beare
+        To grunt and ſweat vnder a weary life, But that the dread of ſomething after death, The vndiſcouered Countrey, from whoſe Borne No Traueller returnes, Puzels the will, And makes vs rather beare those illes we haue, Then flye to others that we know not of.</p>
+    <p>Thus Conſcience does make Cowards of vs all, And thus the Natiue hew of Resolution Is ſicklied o’re, with the pale caſt of Thought, And enterprizes of great pith and moment, With this regard their Currants turne away, And looſe the name of Action. Soft you now, The faire Ophelia? Nimph, in thy Orizons Be all my ſinnes remembred.<hr>
+      <p>Completed on 2/14/2021 by Alexei Schnakenburg</p>
+    </footer>
+    </body>
+</html>

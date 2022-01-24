@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Part 4</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 4 - Part 1">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 4 - Part 1">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework4-1.html">
+        <meta property = "og:description" content = "Homework 4 - Part 1">
+        
+        <!-- Created by Alexei Schnakenburg on October 5, 2021 -->
+        
+        <script>
+            
+            function myFunction1a(){  
+                
+                    myProduct = 1;
+                    mySum = 0;
+                
+                    for (var myCounter = 5; myCounter <= 21; myCounter += 4) { 
+                        myProduct *= myCounter;
+                        mySum += myCounter;
+                    }
+                    
+                    document.getElementById("ProductResult").value=("The product of every fourth integer from 5 through 21 inclusive is: " + myProduct.toLocaleString());
+                    document.getElementById("SumResult").value=("The sum of every fourth integer from 5 through 21 inclusive is: " + mySum.toLocaleString());
+
+                }
+            
+            function myFunction1b(){
+                
+                var myProduct = 1;
+                var mySum = 0;
+                var myCounter = 3;
+                
+                do {
+                    myProduct *= myCounter;
+                    mySum += myCounter;
+                    myCounter += 3;
+                }
+                while(myCounter <= 21);
+                
+                document.getElementById("Results").value=("The product of every third integer from 3 through 21 inclusive is: " + myProduct.toLocaleString() + "\n\nThe sum of every third intenger from 3 to 21 inclusive is: " + mySum.toLocaleString());
+        
+
+            }
+             
+  
+      
+
+        </script>
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script>
+            
+            $(function(){
+            
+                $("#draggable").draggable();
+
+            });
+            
+            
+        </script>
+        
+  
+        <style>
+            
+            
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+            
+            #draggable { width: 150px; height: 150px; padding: 0.5em; }
+            
+        </style>
+    
+    </head>
+    
+    <body onload="myFunction1a();myFunction1b()">
+        
+        <div class = "header">
+            <h1>Part 1</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework4.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework4-2.html">Part 2 - Compound Interest</a></li>
+            <li><a href="homework4-3.html">Extra Credit  </a></li>
+        </ul>
+        
+        <section><h2>Part 1a</h2></section>
+        
+        <p><strong>Product</strong></p>
+        <textarea rows ="3" cols = "40" id="ProductResult" readonly></textarea>
+        
+        <br><br>
+        
+        <p><strong>Sum</strong></p>
+        <textarea rows ="3" cols = "40" id="SumResult" readonly></textarea>
+
+        <br><br>
+        
+        <div id = "draggable" class = "ui-widget-content">
+
+            <section><h2>Part 1b</h2></section>
+
+            <p>
+                
+                <strong>Answer</strong>
+                
+                <br>
+                
+                <em>Click here and drag</em>
+                
+            </p>
+            
+            <textarea rows ="5" cols = "40" id="Results" readonly></textarea>
+            
+        </div>
+    
+    </body>
+    
+    </html>

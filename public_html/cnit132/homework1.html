@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    
+        <title>
+        
+            Mini Project 1
+        
+        </title>
+        
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name = "author" content= "Alexei Schnakenburg">
+        <meta name="description" content = "Mini Project 1 for CNI 132">
+        <meta name="keywords" content = "CNIT 132, CCSF, SEO, HTML">
+        
+        <meta property = "og:title" content="Mini Project 1">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/cnit132/homework1.html">
+        <meta property = "og:description" content = "Mini Project 1 by Alexei Schnakenburg">
+        <meta property = "og:image" content= "https://hills.ccsf.edu/~aschnake/cnit132/favicon.png">
+        
+        <!-- Created by Alexei Schnakenburg on October 2, 2021 -->
+        
+        <style>
+            
+            .grid {
+                display:grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                margin: auto;
+                width: auto;
+                height: auto;
+            }
+        
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: forestgreen;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            
+            
+            a{
+                color:blue;
+            }
+            
+            .navigation {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background: #333333;
+
+            }
+            
+            .navigation ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+            
+            .navigation li{
+            }
+            
+            .navigation li a {
+                display: block;
+                color:white;
+                padding:16px;
+                text-decoration: none;
+            }
+                
+            .navigation li a:hover{
+                background-color: #111111;
+            }
+            
+            .main {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                background-color: #ffe8bc;
+            }
+            
+            .footer {
+                grid-row-start: 3;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                text-align: center;
+                background-color: forestgreen;
+            }
+            
+            h2 {
+                text-align: center;
+            }
+            
+            h3 {
+                padding-left: .5em;
+            }
+            
+            p {
+                padding-left: .5em;
+            }
+                 
+        </style>
+
+    
+    </head>
+    
+    <body>
+        <div class = "grid">
+
+            <div class = "grid-area header" id="Top">
+                <h1>Alexei Schnakenburg - CNIT 132</h1>
+            </div>
+
+            <div class = "grid-area navigation">
+                <ul>
+                    <li>
+                        <a href="homework1.html">Home</a>
+                    </li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MeetUp.html">MeetUp</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "grid-area main">
+
+            <h2><a href="https://www.techopedia.com/2/31579/networks/a-brief-history-of-web-development" data-title="The Turn of the Century" target="_blank" rel="noreferrer">The Turn of the Century</a></h2>
+
+            <hr>
+
+            <section>
+
+                <h2>Introduction</h2>
+
+                <figure style="text-align: center;">
+
+                <img src="https://hills.ccsf.edu/~aschnake/cnit132/images/Alexei_1" alt = "Picture of Alexei Schnakenburg" style = "width:200px;height:auto;border:5px solid #555;text-align: center;">
+                <figcaption>Fig. 1 - Alexei Schnakenburg</figcaption>
+
+                </figure>
+
+                <p>I graduated Phi Beta Kappa from the University of California at Berkeley in December 2016. I currently work full time for the USDA and am pursuing a number of certificatons from the City College of San Francisco's Computer Science and Computer Networking &#38; Information Technology Departments.</p>
+
+                <p>I enjoy learning HTML because its output is readily visible and practical. I have taken three Python classes at CCSF and took JavaScript simultaneously with this course. While I like learning the back-end side, I think HTML and JavaScript are more fun because you get to more clearly see the output. I only wish I had a better eye for design so my pages looked better. </p>
+
+                <p>One site that I find helpful when writing code is <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a>. This site is useful because it provides  tutorials for many of the most commonly learned languages in website and web application development. It also has specific articles that cover most of the common use cases with interactive code that allows you to see both how the code is structured and what the output looks like.</p>
+
+            </section>
+
+            <hr>
+
+            <section>
+
+                <h3>Interesting Working Titles</h3>
+
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noreferrer">Web Content Accessibility Guidelines (WCAG) Overview</a> - This site provides an introduction to making websites accessible to people with disabilities. This is both more inclusive and standard practice.</li>
+                    <li><a href="https://validator.w3.org/" target="_blank" rel="noreferrer">W3C Markup Validator</a> - This is a free site that allows you to easily review your HTML is in compliance with the international agreed upon standards. Ensuring your site meets these will help it to be more successful.</li>
+                    <li><a href="https://search.google.com/test/mobile-friendly?utm_source=mft&utm_medium=redirect&utm_campaign=mft-redirect" target="_blank" rel="noreferrer">Mobile-Friendlty Test</a> - This free site allows you to enter either your websites code or its URL to test its ability to work well with mobile browers. This is critical as much of the content on the internet is through the use of a mobile device such as a smartphone these days.</li>
+                </ul>
+
+            </section>
+
+            </div>
+
+            <hr>
+
+            <footer id="bottom" class = "grid-area footer">
+                <br>
+                Created by Alexei Schnakenburg on 10/2/2021
+                <br>
+                Modified by Alexei Schnakenburg on 12/14/2021
+            <p style="display:inline-block;padding: 15px"><a href="#Top">Top of the page</a></p>
+
+            </footer>
+            
+        </div>
+    
+    </body>
+
+</html>

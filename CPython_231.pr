@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2653/63.py - Very good program. Appreciate the clear guidance provided if no program entered and that it shows what was entered. 
+/users/abrick/pr/231/2653/f6.py - Not exactly sure what is being output when no program entered. Works as required when entering a program, except seems to initally lump together and then disagregate. Seems like something undeeded is going on to start.
+/users/abrick/pr/231/2653/e7.py - Think the prompt you provided for no command line arguments is clear and output works, but does not seem to accept programs, e.g., does not react to '-v' verbose command.
+/users/abrick/pr/231/2653/6t.py - Does not provide for a warning or back up if no command line argument provided. Does not appear to work when command line argument given. Sorry!
+/users/abrick/pr/231/2653/k7.py - While I appreciate the guidance when no command line argument is provided, code does not work when I enter in an argument.
+/users/abrick/pr/231/2653/i5.py - Works as directed and appreciate the guidance when no command line argument is provided. 
+/users/abrick/pr/231/2653/tu.py - Good program but I seem to get the same result whether I enter in a command line argument or not or whether I specify a program or not.

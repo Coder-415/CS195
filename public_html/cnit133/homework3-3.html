@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+
+    <head>
+        
+        <Title>Part 3</Title>
+        
+        <meta charset="utf-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 3 - Part 3">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta property = "og:title" content="Temperature Converter">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/cnit133/homework3-3.html">
+        <meta property = "og:description" content = "Convert between Celsius and Farenheit">
+        <meta property = "og:image" content = "https://hills.ccsf.edu/~aschnake/cnit133/images/Temperature" >
+        
+        <script>
+           
+                
+                function c_convert(){
+                    
+                    num1 = parseFloat(document.forms["myform"].elements["temp"].value);   
+                    var valid = true;
+
+                    if (Number.isNaN(num1)) {
+                         document.forms["myform"].elements["conversion"].value=("ERROR - One of the values provided is not an integer. Please review the inputs and try again.");
+                        valid = false;
+                        }
+                    
+                    if (valid){
+                        c_conv = (5/9 * (num1 -32));
+                        document.forms["myform"].elements["conversion"].value=(num1 + "°" + " Fahrenheit is " + Math.round(c_conv) + "°" + " Celsius.");
+                        delete(num1);
+                        } 
+                    }
+                
+                function f_convert(){
+                    
+                    num1 = parseFloat(document.forms["myform"].elements["temp"].value); 
+                    var valid = true;
+                    
+                    if (Number.isNaN(num1)) {
+                        document.forms["myform"].elements["conversion"].value=("ERROR - One of the  values provided is not an integer. Please review the inputs and try again.");
+                        valid = false;
+                        }
+                    
+                    if (valid){ 
+                        f_conv = ((9/5 * num1) + 32);
+                        document.forms["myform"].elements["conversion"].value=(num1 + "°" + " Celsius is " + Math.round(f_conv) +  "°" +" Fahrenheit.");
+                        delete(num1);
+                    }
+                }   
+       
+        </script>
+        
+        
+        <!-- Created by Alexei Schnakenburg on September 27, 2021-->
+        
+        <style>
+        
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+              
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+            
+            textarea {
+                box-sizing: border-box;
+                text-align: center;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Homework 3 - Part 3</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework3.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework3-1.html">Part 1 - Grade Calculator</a></li>
+            <li><a href="homework3-2.html">Part 2 - Commission Calculator</a></li>
+            <li><a href="homework3-4.html">Part 4 - Multiplication Game</a></li>
+        </ul>
+    
+        
+          <section>
+            <h2>Content Below:</h2>
+            <hr>
+        </section>
+        
+        <form name = "myform">
+            
+            
+            Temperature: <input type = "text" name = "temp" size = "10">
+            
+            <br><br>
+            
+            Celsius to Fahrenheit: <input type = "radio" name="option" id="c_selected" onclick="f_convert()">
+            
+            <br><br>
+            
+            Fahrenheit to Celsius: <input type = "radio" name="option" id="f_selected" onclick="c_convert()">
+            
+            <br><br>
+        
+            <input type = "reset" value = "RESET" onclick="location.reload();">
+            
+            <br>
+            
+            <p>Click on Reset to reset the conversion</p>
+            
+            <textarea rows = "3" cols = "40" name = "conversion" readonly></textarea>
+
+        </form>
+        
+        <hr>
+    
+    </body>
+    
+</html>

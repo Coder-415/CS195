@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Part 7-1</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 7 - Part 1">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 7 - Part 1">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework7-1.html">
+        <meta property = "og:description" content = "Homework 7 - Part 1">
+        <meta property = "og:image" content = "https://www.ccsf.edu/sites/default/files/2021/inline-media/myccsf-logo-150-ram.png">
+        
+        <!-- Created by Alexei Schnakenburg on November 21, 2021 -->
+        
+        
+        <script>
+            
+            function dynamicbackgroundcolor(){
+                var selectedbackground = document.getElementsByName("selection1");
+                
+                for (var i = 0, length = selectedbackground.length; i < length; i++){
+                    if (selectedbackground[i].checked){
+                        document.body.style.backgroundColor = selectedbackground[i].className;
+                        break;
+                    }
+                }
+                
+            }
+            
+            function dynamicfontsize(){
+                var selectedfontsize = document.getElementById("fontsize");
+                document.body.style.fontSize = selectedfontsize.value;
+            }
+            
+            function dynamicfontstyle(){
+                var selectedfontstlye = document.getElementsByName("selection3");
+                
+                for (var i = 0, length = selectedfontstlye.length; i < length; i++){
+                    if (selectedfontstlye[i].checked){
+                        document.body.style.fontFamily = selectedfontstlye[i].className;
+                        break;
+                    }
+                    else {
+                        document.body.style.fontFamily = ("sans-serif");
+
+                    }
+                }   
+            }
+            
+            function normalweight(){
+                var normalweightselected = document.getElementById("Normal");
+                document.body.style.fontWeight = normalweightselected.className;
+            }
+            
+            function boldweight(){
+                var boldweightselected = document.getElementById("Bold");
+                document.body.style.fontWeight = boldweightselected.className;
+            }
+             
+        </script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+        <style>
+
+        </style>
+        
+        <link rel="stylesheet" href="Cnit133basic.css">
+    
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Part 1</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework7.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework7-2.html">Part 2 - Mouseover Navigation Bar</a></li>
+        </ul>
+        
+        <section><h2>Part 1</h2></section>
+        
+        <form name = "myform" id = "myform">
+        
+            <table onchange = "dynamicbackgroundcolor()">
+                <tr>
+                    <td>Please use the radio buttons to select a background color</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "radio" id = "bgdclr1" name = "selection1" value = "Tan" class = "tan" required>
+                            <label for = "bgdclr1">Tan</label>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <input type = "radio" id = "bgdclr2" name = "selection1" value = "Pale Green" class = "palegreen" required>
+                            <label for = "bgdclr1">Pale Green</label>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <input type = "radio" id = "bgdclr3" name = "selection1" value = "Salmon" class = "salmon" required>
+                            <label for = "bgdclr1">Salmon</label>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <input type = "radio" id = "bgdclr4" name = "selection1" value = "Deep Sky Blue" class = "deepskyblue" required>
+                            <label for = "bgdclr1">Deep Sky Blue</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "radio" id = "bgdclr5" name = "selection1" value = "White" class = "white" required>
+                            <label for = "bgdclr1">White</label>
+                    </td>
+                </tr>
+            </table>
+            
+            <br>
+            
+            <table onchange = "dynamicfontsize()">
+                <tr>
+                    <td>Please select the desired font size</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "fontsize" name = "selection2" class = "fontsize" required>
+                            <option value = "">---</option>
+                            <option value = "x-small">Extra Small</option>
+                            <option value = "small">Small</option>
+                            <option value = "medium">Medium</option>
+                            <option value = "large">Large</option>
+                            <option value = "x-large">Extra Large</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            
+            <br>
+            
+            <table onchange = "dynamicfontstyle()">
+                <tr>
+                    <td>Please pick the relevant checkbox to adjust the font-style</td>
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox1" name = "selection3" value =  "Arial" class = "Arial">
+                        <label for = "mycheckbox1">Arial</label>
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox2" name = "selection3" value =  "Veranda" class = "Veranda">
+                        <label for = "mycheckbox1">Veranda</label>
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox3" name = "selection3" value =  "Georgia" class = "Georgia">
+                        <label for = "mycheckbox1">Georgia</label>
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox4" name = "selection3" value =  "Courier New" class = "Courier New">
+                        <label for = "mycheckbox1">Courier New</label>
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" id = "mycheckbox5" name = "selection3" value =  "Brush Script MT" class = "Brush Script MT">
+                        <label for = "mycheckbox1">Brush Script MT</label>
+                </tr>
+            </table>
+            
+            <p>Please pick the desired font weight</p>
+            
+             <button type = "button" value = "normal" class = "normal" id = "Normal" onclick="normalweight()">Normal</button>
+             <button type = "button" value = "bold" id = "Bold" class = "bold" onclick="boldweight()">Bold</button>
+
+        </form>
+        
+        <script>   
+            $(document).ready(function(){
+                $('input:checkbox').click(function() {
+                    $('input:checkbox').not(this).prop('checked', false);
+                });
+            });</script>
+    
+    </body>
+    
+    </html>

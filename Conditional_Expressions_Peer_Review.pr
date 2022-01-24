@@ -1,0 +1,7 @@
+tr - Does not work, sorry. "TypeError: '<' not supported between instances of 'set' and 'int'".
+sz - Code runs but gives inaccurate results. I entered multiple duplicates but only one was listed as duplicated. Also, code could use spacing.
+ar - Code runs and gives accurate results but does not accomplish specific task required. Only way to tell how many duplicates is by counting.
+3q - Good, code works and accomplishes the task. Might be useful to add the specific duplicated values.
+5t - Appreciate that you list how many duplicate values there are. Think it could be more useful to list each duplicated value rather than all values entered.
+yj - Enjoy the humor. Gets the job done. Might be useful to list the values duplicated. 
+g7 - Very good. Code concise and effective. Appreciate you listing number of arguments, might be useful to list values which have been duplicated.

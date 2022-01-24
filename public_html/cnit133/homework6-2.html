@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Homework 6-2</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 6 - Part 2">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 6 - Part 2">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework6-2.html">
+        <meta property = "og:description" content = "Homework 6 - Part 2">
+        
+        <!-- Created by Alexei Schnakenburg on November 8, 2021 -->
+        
+        <script>
+            
+            function findtext() {
+                
+                var charentered = document.getElementById("searchvalue").value
+                
+                var texttosearch = document.getElementById("enteredtext").value.toLowerCase();
+                var searchtext = document.getElementById("searchvalue").value.toLowerCase();
+                
+                if (texttosearch.length == 0 && searchtext.length != 1){
+                    document.getElementById("falsevalueinput1").style.visibility = "visible";
+                    document.getElementById("falsevalueinput2").style.visibility = "visible";
+                    }
+                else if (texttosearch.length == 0 && searchtext.length == 1){
+                    document.getElementById("falsevalueinput1").style.visibility = "visible";
+                    document.getElementById("falsevalueinput2").style.visibility = "hidden";
+                    }
+                else if (texttosearch.length > 0 && searchtext.length != 1){
+                    document.getElementById("falsevalueinput1").style.visibility = "hidden";
+                    document.getElementById("falsevalueinput2").style.visibility = "visible";
+                    }
+                else{
+                    document.getElementById("falsevalueinput1").style.visibility = "hidden";
+                    document.getElementById("falsevalueinput2").style.visibility = "hidden";
+                       
+                    var myCount = 0; 
+                    let myCharref = []
+
+                    for(i=0; i < texttosearch.length; i++ ){
+                        myCharref = texttosearch.charAt(i)
+                        if (myCharref == searchtext){
+                            myCount +=1;
+                            }
+                        }   
+                    
+                    if (myCount >=1){
+                        document.getElementById("result").value = ("These are the number of occurences of the provided character: " + myCount);    
+                        }
+                    else{           
+                        window.open("","Negative","width=300,height=100,resizable,scrollbars,men ubar,status,location,toolbar").document.body.innerHTML = ("Search character entered not found in text string! - " + charentered);
+                        document.getElementById("result").value = ("");    
+                        }
+                    }
+                }
+
+        </script>
+        
+        <style>    
+            
+        </style>
+        
+        <link rel="stylesheet" href="Cnit133basic.css">
+    
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Part 2</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework6.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework6-1.html">Part 1 - Math Objects</a></li>
+            <li><a href="homework6-3.html">Part 3 - Regular Expressions</a></li>
+        </ul>
+        
+        <section><h2>Part 2: String Objects</h2></section>
+        
+        <form name = "myform" id = "myform" method = "post">
+        
+            <table>
+                <tr>
+                    <td>Please enter some text to search: </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea rows ="6" cols = "45" id = "enteredtext" name = "enteredtext" required></textarea>
+                    </td>    
+                </tr>
+            </table>
+            
+            <div style = "visibility:hidden ; color:red;" id = "falsevalueinput1"><em>Please make sure to enter some value to search.</em></div>
+
+              <table>  
+                
+                <tr>
+                    <td>Please enter a search value:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "text" name = "searchvalue" id = "searchvalue" required>
+                    </td>
+                </tr>
+            </table>
+            
+            <div style = "visibility:hidden ; color:red;" id = "falsevalueinput2"><em>Please enter only one character to search by.</em></div>
+            
+            <button type = "button" value = "SUBMIT" id = "submit" onclick ="findtext();">Submit</button>
+              
+        </form>
+        
+        <h3>Result</h3>
+        
+        <textarea rows ="6" cols = "45" id = "result" name = "result" readonly></textarea>
+
+        
+    </body>
+    
+    </html>

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Part 3</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 5 - Part 3">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 5 - Part 3">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework5-3.html">
+        <meta property = "og:description" content = "Homework 5 - Part 3">
+        
+        <!-- Created by Alexei Schnakenburg on October 26, 2021 -->
+        
+        <script>
+            
+            function myStateinfo(){
+                
+                var statedata = [
+                    ['AL','Alabama','Montgomery','4,887,871'],
+                    ['AK','Alaska','Juneau','737,438'],
+                    ['AZ','Arizona','Phoenix','7,171,646'],
+                    ['AR','Arkansas','Little Rock','3,010,825'],
+                    ['CA','California','Sacramento','39,557,045'],
+                    ['CO','Colorado','Denver', '5,694,564'],
+            ];
+                            
+                var selectedstate = document.getElementById("selection").value;
+                var stringselectedstate = selectedstate.toString().toLowerCase();
+                                                
+                if  (stringselectedstate.length == 2){
+                    stringselectedstate = stringselectedstate.toUpperCase();
+                }
+                else if (stringselectedstate.length > 2){
+                    function captilizeFirstLetter(string){
+                        return string.charAt(0).toUpperCase() + string.slice(1);}
+                    stringselectedstate = captilizeFirstLetter(stringselectedstate);
+                    }
+               
+                var myabbrv = statedata.findIndex(row => row.includes(stringselectedstate));
+                 
+                try {
+                    document.getElementById("result").value=("Thank you for your inquiry, here is the information you requested: \n\n" + "State abbr = " + statedata[myabbrv][0] + "\nState Name = " + statedata[myabbrv][1] + "\nCapital = " + statedata[myabbrv][2] + "\nPopulation = " + statedata[myabbrv][3]);
+                }
+                catch(err){
+                     document.getElementById("result").value=("Please try again requesting data from the limited sample - Alabama, Alaska, Arizona, Arkansas, California, and Colorado. Thank you.")
+                }
+                                
+                function eraseText() {
+                document.getElementById("result").value = "";
+                }   
+            
+            }
+         
+        </script>
+    
+  
+        <style>
+            
+            
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Part 3</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework5.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework5-1.html">Part 1 - Form Validation</a></li>
+            <li><a href="homework5-2.html">Part 2 - Pulldown Event Handler</a></li>
+        </ul>
+        
+         <form name = "myform" id = "myform">
+        
+              <table>
+            
+                <tr>
+                    <td><strong>Which state do you want data on?:</strong></td>
+                </tr>
+                <tr>
+                    <td><em>Please enter the state name or abbreviation</em></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" size="10" name="selection" id="selection">
+                    </td>
+                </tr>
+            
+            </table>
+            
+            <button type = "button" onclick = "myStateinfo();">State info</button>
+        
+        </form>
+        
+        <br>Results:
+        <br>
+            
+            <textarea rows ="8" cols = "50" id="result" readonly>
+                          
+            </textarea>
+        
+            <br>
+                
+        <br><br>
+    
+    </body>
+    
+    </html>

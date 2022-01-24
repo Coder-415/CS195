@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Homework 8 - Ajax Applications</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 7 - Part 2">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta property = "og:title" content="Homework8">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework8.html">
+        <meta property = "og:description" content = "Homework 8">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <!-- Created by Alexei Schnakenburg on December 11, 2021 -->
+        
+        <script>
+        
+                function myShowHint(str){
+                    if (str.length == 0){
+                        document.getElementById("myTxtHint").innerHTML = "";
+                        return;}
+                    else{
+                        var xmlhttp = new XMLHttpRequest();
+                        xmlhttp.onreadystatechange = function(){
+                            if (this.readyState == 4 && this.status == 200){
+                                document.getElementById("myTxtHint").innerHTML = this.responseText;
+                            }
+                        };
+                        xmlhttp.open("GET","gethint.php?q=" + str, true);
+                        xmlhttp.send();
+                    }
+                }
+            
+        </script>
+        
+        <script>
+            
+            function navgbar(x) {
+                x.style.backgroundColor = "red";
+            }
+            
+            function unnavgbar(x){
+                x.style.backgroundColor = "#333";
+            }
+            
+        </script> 
+        
+        <script>
+            
+            function UserAction(){
+            
+                var myStartingValue = document.getElementById("value").value;
+                var myConversionCurrency = document.getElementById("currencies2").value;
+                var ConvertFromEuro = document.getElementById("Conversion1");
+                var ConvertToEuro = document.getElementById("Conversion2");
+                var ConversionDirection 
+                
+                if (isNaN(myStartingValue)){
+                    document.getElementById("Results").value = ("Please enter a valid number value. This can be a whole number or one with decimals. Sorry, no commas.");
+                    return;
+                    }
+            
+                const host = 'api.frankfurter.app';
+                fetch(`https://${host}/latest`)
+                    
+                  .then(resp => resp.json())
+                  .then((data) => {
+                    var myConversionRate;
+                    if (myConversionCurrency == "USD")
+                        {myConversionRate = data.rates.USD;}
+                    if (myConversionCurrency == "JPY")
+                        {myConversionRate = data.rates.JPY;}
+                    if (myConversionCurrency == "GBP")
+                        {myConversionRate = data.rates.GBP;}
+                    if (myConversionCurrency == "AUD")
+                        {myConversionRate = data.rates.AUD;}
+                    if (myConversionCurrency == "CAD")
+                        {myConversionRate = data.rates.CAD;}
+                    
+                    if (myConversionCurrency == ""){
+                         document.getElementById("Results").value = ("");
+                        }
+                    
+                    if (myConversionCurrency != ""){
+                        if (ConvertToEuro.checked){
+                            ConversionDirection = 1/myConversionRate;
+                            document.getElementById("Results").value = ((myStartingValue * ConversionDirection).toLocaleString("en-US") + " EUR");
+                        }
+                        if (ConvertFromEuro.checked && myConversionCurrency != ""){
+                            ConversionDirection = myConversionRate/1;
+                            document.getElementById("Results").value = ((myStartingValue * ConversionDirection).toLocaleString("en-US") + " " + myConversionCurrency);
+                        }
+                    }
+                });
+            }  
+            
+        </script>
+  
+        <style>
+                 
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+
+            nav {background:#333;}
+            nav ul {
+                text-align:center;
+                list-style-type: none;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            nav ul li {float:left;}
+            nav ul li a {
+                display:block;
+                color:white;
+                text-align: center; 
+                padding:16px;
+                text-decoration: none;
+            }
+            nav ul li ul {position:absolute;width:10em;background:#FFF;border:solid; border-color: black;}
+            nav ul li ul li {width:10em; border-bottom: 2px solid black; border-radius: 5px;}
+            nav ul li ul li a {display:block;padding:15px 10px;color:#444;}
+            nav ul li ul li:hover a {background:#F7F7F7; border:solid; border-color: red;}
+            nav ul li ul.fallback {display:none;}
+            nav ul li:hover ul.fallback {display:block;}
+            
+            .header a {
+                color:blue;
+            }
+            
+            body a {
+                color:blue;
+            }
+         
+        </style>
+    
+    </head>
+    
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Homework 8 - Ajax Applications</h1>
+            <p>Alexei Schnakenburg</p>
+        </div>
+        
+    	<nav>
+            <ul>
+                <li><a href="homework1.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Home</a></li>
+                <li><a href="homework2.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 2</a>
+                    <ul class = "submenu" id = "sub1">
+                        <li><a href = "homework2-1.html">Part 1</a></li>
+                        <li><a href = "homework2-2.html">Part 2</a></li>
+                        <li><a href = "homework2-3.html">Part 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="homework3.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 3</a>
+                     <ul>
+                        <li><a href = "homework3-1.html">Part 1</a></li>
+                        <li><a href = "homework3-2.html">Part 2</a></li>
+                        <li><a href = "homework3-3.html">Part 3</a></li>
+                        <li><a href = "homework3-4.html">Part 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="homework4.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 4</a>
+                     <ul>
+                        <li><a href = "homework4-1.html">Part 1</a></li>
+                        <li><a href = "homework4-2.html">Part 2</a></li>
+                        <li><a href = "homework4-3.html">Part 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="homework5.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 5</a>
+                     <ul>
+                        <li><a href = "homework5-1.html">Part 1</a></li>
+                        <li><a href = "homework5-2.html">Part 2</a></li>
+                        <li><a href = "homework5-3.html">Part 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="homework6.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 6</a>
+                     <ul class = "submenu" id = "sub5">
+                        <li><a href = "homework6-1.html">Part 1</a></li>
+                        <li><a href = "homework6-2.html">Part 2</a></li>
+                        <li><a href = "homework6-3.html">Part 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="homework7.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 7</a>
+                     <ul>
+                        <li><a href = "homework7-1.html">Part 1</a></li>
+                        <li><a href = "homework7-2.html">Part 2</a></li>
+                    </ul>    
+                </li>
+               <li><a href="homework8.html" onmouseover = "navgbar(this)" onmouseout = "unnavgbar(this)">Homework 8</a></li>
+            </ul>
+        </nav>
+ 
+        <script src= "//code.jquery.com/jquery.min.js" ></script>
+        
+        <script>
+            $('nav li ul').hide().removeClass('fallback');
+            $('nav li').hover(
+              function () {
+                $('ul', this).stop().slideDown(100);
+              },
+              function () {
+                $('ul', this).stop().slideUp(100);
+              }
+            );
+        </script>
+        
+        <p><b>Start typing a name in the input field velow:</b></p>
+        
+        <form>
+            <label for = "fname">First name:</label>
+            <input type = "text" id ="fname" name = "fname" onkeyup="myShowHint(this.value)">
+        </form>
+        <p>Suggestions: <span id = "myTxtHint"></span></p>
+        
+        <hr>
+        
+        <h3>Euro Converter</h3>
+        
+        <form name = "myform" id = "myform" onchange ="UserAction()">
+            
+            <table> 
+                <tr>
+                    <td>Please enter a value to convert:</td>
+                    <td><input type = "text" id = "value" name = "value" onchange ="UserAction()" onkeyup = "UserAction()"></td>
+                </tr>          
+            </table>
+            
+            <table>
+                <tr>
+                    <td>Conversion Direction</td>
+                    <td>
+                        <input type = "radio" id = "Conversion1" name = "Direction" value = "FromEuro" checked>
+                            <label for = "Conversion1">From Euro:</label>
+                    </td>
+                    <td>
+                        <input type = "radio" id = "Conversion2" name = "Direction" value = "ToEuro">
+                            <label for = "Conversion2">To Euro:</label>
+                    </td>
+                </tr>
+            </table>
+            
+            <table>
+                <tr>
+                    <td>Converting Currency:</td>
+                    <td>
+                        <select id = "currencies2" name = "currencies">
+                            <option value = "">---</option>
+                            <option value = "USD">United States Dollar</option>
+                            <option value = "JPY">Japanese Yen</option>
+                            <option value = "GBP">Great British Pound</option>
+                            <option value = "AUD">Australian Dollar</option>
+                            <option value = "CAD">Canadian Dollar</option>
+                        </select>
+                    </td>
+                </tr>    
+            </table>
+            
+        </form>
+        
+        <p>Conversion Value:</p>
+        
+        <textarea id="Results" rows ="5" cols = "40" readonly></textarea>
+        
+        <h4>Additional Information</h4>
+        
+        <p>For this assignment, I chose a relatively simple API called 'The Frankfurter API'. It references the European Central Bank's currency exchange rates and is updated daily. The API provides responses in JSON. As illustrated above, it enables accurate near real-time currency conversions. For the purposes of demonstrating its functionality, I decided to focus on the API's default currency: Euro.</p>
+        
+        <p>I chose this API because it does not require a key to access. One thing I noticed is that some APIs have restrictions against Cross-Origin Resource Sharing (CORS). This would require more complicated calling than is involved with this API. There is a lot more that one could do with this API, including providing more conversion functionality. However, that might entail leveraging an integrated library as calls will default to Euro.</p>
+        
+        <p>Here is a link for further documention: <a href = "https://www.frankfurter.app/docs/">https://www.frankfurter.app/docs/</a></p>
+    
+    </body>
+    
+    </html>

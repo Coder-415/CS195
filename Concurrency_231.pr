@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2654/zy.py - Would be nice to provide an example when no file paths given. Also, not sure if it works because was stuck on checking. Does correctly identify non-valid.
+/users/abrick/pr/231/2654/wf.py - Like how it is able to handle multiple files and displays useful information. Good job!
+/users/abrick/pr/231/2654/hs.py - Gets the correct answer and like how it provides the name of the file given. More error proofing would be nice as would an example path.
+/users/abrick/pr/231/2654/4e.py - Some kind of error as deems no path as  valid UTF and incorrectly identifies non-UTF as valid. 
+/users/abrick/pr/231/2654/rf.py - Needs more error proofing. Should at least tell user what to do if no command line argument given. Also, does not seem to handle individual files. 
+/users/abrick/pr/231/2654/pr.py - Appreciate that a sample result is provided, but does not seem to accept cmd line arguments. Also, seems quite slow. Maybe try fewer workers or not specifying. 
+/users/abrick/pr/231/2654/9h.py - Not even sure what is produced when no command line argument is given. Work on the error proofing. Like the way you output and detected correct result. Works for both valid and invalid. 

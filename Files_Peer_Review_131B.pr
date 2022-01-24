@@ -1,0 +1,7 @@
+ju - Great! I really like that your code runs independently and excepts commad line arguments. Might be helpful to format result with commas.  
+qj - Ok. This does not really provide any clarity as to what is being displayed. 
+4g - Really good that it is able to accept both command line arguments and run independently by hardcoding file to open. Consider formatting result. 
+ik - Really good. I like that it does not need a commad line argument and is well formatted. - 
+dc - Consider harding the file to open so it will work without a command line argument. Also, would be nice to format result.
+hf - Need error proofing in event of no command line argument. Also, double check the result. A line.split() would get you a different result.
+zg - Use an exception to account for no command line argument. Good formatting and correct result.

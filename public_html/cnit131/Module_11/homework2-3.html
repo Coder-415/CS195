@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+
+    <head>
+        
+        <Title>Part 3</Title>
+        
+        <meta charset="utf-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 2 - Part 3">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <!-- Created by Alexei Schnakenburg on September 13, 2021  n1 = parseInt(number1);
+                n2 = parseInt(number2);
+                n3 = parseInt(number3);
+                n4 = parseInt(number4);
+                n5 = parseInt(number5);-->
+        
+        <script>
+            
+                function process()
+            {
+                var number1, number2, number3, n1, n2, n3, sum, average, product, smallest, largest;
+                
+                number1 = document.forms["myform"].elements["num1"].value;
+                number2 = document.forms["myform"].elements["num2"].value;
+                number3 = document.forms["myform"].elements["num3"].value;
+                number4 = document.forms["myform"].elements["num4"].value;
+                number5 = document.forms["myform"].elements["num5"].value;
+        
+                poscount = 0
+                negcount = 0 
+                zerocount = 0 
+                ecount = 0
+                
+                if (number1 >= 1)
+                    (poscount += 1);
+                else if (number1 <= -1)
+                    (negcount +=1);
+                else if (number1 = 0)
+                    (zerocount +=1);
+                else 
+                    (ecount +=1);
+                
+                if (number2 >= 1)
+                    (poscount += 1);
+                else if (number2 <= -1)
+                    (negcount +=1);
+                else if (number2 = 0)
+                    (zerocount +=1);
+                else 
+                    (ecount +=1);
+                
+                if (number3 >= 1)
+                    (poscount += 1);
+                else if (number3 <= -1)
+                    (negcount +=1);
+                else if (number3 = 0)
+                    (zerocount +=1);
+                else 
+                    (ecount +=1);
+                
+                if (number4 >= 1)
+                    (poscount += 1);
+                else if (number4 <= -1)
+                    (negcount +=1);
+                else if (number4 = 0)
+                    (zerocount +=1);
+                else 
+                    (ecount +=1);
+                
+                if (number5 >= 1)
+                    (poscount += 1);
+                else if (number5 <= -1)
+                    (negcount +=1);
+                else if (number5 = 0)
+                    (zerocount +=1);
+                else 
+                    (ecount +=1);
+                
+                    
+                document.forms["myform"].elements["result"].value=("Inputted numbers were: " + n1.toLocaleString() + " | " + n2.toLocaleString() + " | " + n3.toLocaleString() + " | " + n4.toLocaleString() +" | " + n4.toLocaleString() +"\nNumber of positives is: " + poscount + "\nNumber of negatives is: " + negcount + "\nNumber of zeros is: " + zerocount + "\nNumber of errors: " + ecount);}
+        
+        
+        </script>
+        
+        <style>
+        
+                    body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+              
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+        
+           
+        </style>
+
+    </head>
+    
+    <body>
+    
+      <div class = "header">
+            <h1>Homework 2 - Part 3</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework1.html">Home</a></h4>
+        </div>
+        
+            <ul>
+            <li><a href="homework1.html">Home</a></li>
+            <li><a href="homework2-1.html">Part 1</a></li>
+            <li><a href="homework2-2.html">P1art 3</a></li>
+          </ul>
+        
+          <section>
+            <h2>Content Below:</h2>
+            <hr>
+        </section>
+        
+        <form name = "myform">
+            
+            <table>
+                <tr>
+                <td>First Number:</td>
+                <td><input type = "text" name = "num1" size = "10"></td>
+                </tr>
+                
+                <tr>
+                <td>Second Number:</td>
+                <td><input type = "text" name = "num2" size = "10"></td>
+                </tr>
+                
+                <tr>
+                <td>Third Number:</td>
+                <td><input type = "text" name = "num3" size = "10"></td>
+                </tr> 
+                
+                <tr>
+                <td>Fourth Number:</td>
+                <td><input type = "text" name = "num4" size = "10"></td>
+                </tr> 
+                
+                <tr>
+                <td>Fifth Number:</td>
+                <td><input type = "text" name = "num5" size = "10"></td>
+                </tr> 
+            </table>
+            
+            <br>Results:
+            
+                <textarea rows ="6" cols = "50" name="result" readonly>
+                          </textarea>
+
+            <br><br>
+
+            <input type = "button" onclick="process()" value="SUBMIT">
+            <input type = "reset" value = "RESET">
+        
+        </form>
+        
+        <hr>
+          
+  </body>
+    
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    
+        <title>
+        
+            Mini Project 1
+        
+        </title>
+           
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name = "author" content= "Alexei Schnakenburg">
+        <meta name="description" content = "Assignments Page">
+        <meta name="keywords" content = "CNIT 132, CCSF, SEO, HTML">
+        
+        <meta property = "og:title" content="Assignments Page">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/cnit132/assignments.html">
+        <meta property = "og:description" content = "Assignments for Alexei Schnakenburg">
+        <meta property = "og:image" content= "https://hills.ccsf.edu/~aschnake/cnit132/favicon.png">
+        
+        <!-- Created by Alexei Schnakenburg on September 29, 2021 -->
+        
+          <style>
+            
+            .grid {
+                display:grid;
+                grid-template-columns: 10em auto;
+                grid-template-rows: auto;
+                margin: auto;
+                width: auto;
+                height: auto;
+            }
+        
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: forestgreen;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            
+            
+            a{
+                color:blue;
+            }
+            
+            .navigation {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background: #333333;
+            }
+            
+            .navigation ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+            
+            .navigation li{
+            }
+            
+            .navigation li a {
+                display: block;
+                color:white;
+                padding:16px;
+                text-decoration: none;
+            }
+                
+            .navigation li a:hover{
+                background-color: #111111;
+            }
+            
+            .main {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                background-color: #ffe8bc;
+            }
+            
+            .footer {
+                grid-row-start: 3;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                text-align: center;
+                background-color: forestgreen;
+            }
+            
+            h2 {
+                text-align: center;
+            }
+            
+            h3 {
+                padding-left: .5em;
+            }
+            
+            p {
+                padding-left: .5em;
+            }
+                 
+        </style>
+
+    
+    </head>
+    
+    <body>
+        
+        <div class = "grid">
+        
+            <div class = "grid-class header" id="Top">
+                <h1>CNIT 132 Assignments</h1>
+            </div>
+
+           <div class = "grid-area navigation">
+                <ul>
+                    <li>
+                        <a href="homework1.html">Home</a>
+                    </li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MeetUp.html">MeetUp</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "grid-class main">
+
+            <ol>
+                   <li>
+                        <a href="homework1.html">Home</a>
+                    </li>
+                    <li>
+                        <a href = "homework2.html">Mini Project Two</a>
+                    </li>
+                   <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MOD_1.html">Creation of Basic Web Site</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MOD_2.html">Web Page for SEO</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/hw4.html">Working with Images</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MOD_6.html">Using CSS</a>
+                    </li>
+                    <li>
+                        <a href="assignments.html">Assignments</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/MeetUp.html">MeetUp</a>
+                    </li>
+                    <li>
+                        <a href="https://hills.ccsf.edu/~aschnake/cnit132/Contact.html">Contact</a>
+                    </li>
+            </ol>
+
+            </div>
+
+            <footer id="bottom" class = "grid-class footer">
+
+            Created by Alexei Schnakenburg on 10/2/2021
+            <p style="display:inline-block;padding: 15px"><a href="#Top">Top of the page</a></p>
+
+            </footer>
+            
+        </div>
+    
+    </body>
+
+</html>

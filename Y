@@ -1,0 +1,5 @@
+name = "Phil Ting"
+
+"My representative in the California State Assembly is {}.".format(name)
+
+print "My representative in the California State Assembly is" name

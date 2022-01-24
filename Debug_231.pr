@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2648/ss.py - The bonus associated with ties appears stuck at 2. Otherwise, seems to work fine. 
+/users/abrick/pr/231/2648/76.py - Great job. Works as required and the more ties the larger the bonus. 
+/users/abrick/pr/231/2648/27.py - Looks like you may have submitted code for a different assignment. Looks like it works for the time exercise. 
+/users/abrick/pr/231/2648/zk.py - The bonus does not increase for each tie. Otherwise, it is fine. Seems to be a common issue and hard to spot. 
+/users/abrick/pr/231/2648/8q.py - Looks like you missed updating the bonus to increase for each tie. Easy to miss this was an issue.
+/users/abrick/pr/231/2648/kw.py - Ties do not provide any kind of bonus. Supposed to start with a bonus of one and increase for each tie.
+/users/abrick/pr/231/2648/fp.py - Need to change the index from suit and shuffle the deck. Does not look like you actually made any changes.

@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+  
+<html lang="en">
+
+    <head>
+        
+        <title>Part 2</title>
+        
+        <meta charset="UTF-8">
+        
+        <meta name ="description" content="CNIT 133 Homework 5 - Part 2">
+        <meta name ="author" content="Alexei Schnakenburg">
+        <meta name ="keywords" content="CCSF,HTML,JavaScript">
+        
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        
+        <meta property = "og:title" content="Homework 5 - Part 2">
+        <meta property = "og:url" content = "https://hills.ccsf.edu/~aschnake/CNIT133/Homework5-2.html">
+        <meta property = "og:description" content = "Homework 5 - Part 2">
+        
+        <!-- Created by Alexei Schnakenburg on October 26, 2021-->
+        
+        <script>
+            
+            function gotosite1(){
+                
+                var sitetovist1 = document.getElementById("website1").value;
+                
+                if (sitetovist1 == ""){}
+                else if (sitetovist1 == "Google"){
+                    window.open("https://www.google.com");
+                }
+                else if (sitetovist1 == "Bing"){
+                    window.open("https://www.bing.com");
+                }
+                else if (sitetovist1 == "Yahoo"){
+                    window.open("https://www.yahoo.com");
+                }
+                else if (sitetovist1 == "Ask"){
+                    window.open("https://www.ask.com");
+                }
+                
+            }
+            
+            function gotosite2(){
+                
+                var sitetovisit2 = document.getElementById("website2").value;
+                
+                if (sitetovisit2 == ""){}
+                else if (sitetovisit2 == "Facebook"){
+                    window.open("https://www.facebook.com");
+                }
+                else if (sitetovisit2 == "YouTube"){
+                    window.open("https://www.youtube.com");
+                }
+                else if (sitetovisit2 == "Instagram"){
+                    window.open("https://www.instagram.com");
+                }
+                else if (sitetovisit2 == "TikTok"){
+                    window.open("https://www.tiktok.com");
+                }
+                
+            }
+                
+
+        </script>
+
+  
+        <style>
+            
+            
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                background-color: #ffe8bc;
+            }
+            
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #ba4b00;
+                color:white;
+                font-size: 30px;
+            }
+            
+            .content{
+                padding:20px;
+            }
+            
+            a{
+                color:blue;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #333333;
+            }
+
+            li {
+                float:left;
+            }
+            
+            li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding:16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #111111;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        
+        <div class = "header">
+            <h1>Part 2</h1>
+            <p>Alexei Schnakenburg</p>
+            <h4><a href="homework5.html">Home</a></h4>
+        </div>
+        
+        <ul>
+            <li><a href="homework5-1.html">Part 1 - Form Validation</a></li>
+            <li><a href="homework5-3.html">Part 3 - User Input Using Two-Dimensional Array</a></li>
+        </ul>
+        
+        <form name = "myform1" id= "myform1" onchange = "gotosite1();"> 
+            
+            <table>
+            
+                <tr>
+                    <td><strong>Which of these search enginge websites do you want to vist?:</strong></td>
+                </tr>
+                <tr>
+                    <td><em>New tab will go to whichever one you select</em></td>
+                </tr>
+                <tr>
+                    <td>
+                          <select id = "website1" name = "website1">
+                            <option value = "">---</option>
+                            <option value = "Google">Google</option>
+                            <option value = "Bing">Bing</option>
+                            <option value = "Yahoo">Yahoo</option>
+                            <option value= "Ask">Ask</option>
+                        </select>
+    
+                    </td>
+                </tr>
+            
+            </table>
+        
+        </form>
+        
+        <br><br>
+        
+        <form name = "myform2" id = "myform2">
+        
+              <table>
+            
+                <tr>
+                    <td><strong>Which of these social media websites do you want to vist?:</strong></td>
+                </tr>
+                <tr>
+                    <td><em>New tab will go to whichever one you select once you click on 'submit'</em></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "website2" name = "website2">
+                            <option value = "">---</option>
+                            <option value = "Facebook">Facebook</option>
+                            <option value = "YouTube">YouTube</option>
+                            <option value = "Instagram">Instagram</option>
+                            <option value= "TikTok">TikTok</option>
+                        </select>
+    
+                    </td>
+                </tr>
+            
+            </table>
+            
+            <button onclick = "gotosite2()">SUBMIT</button>
+            <input type = "reset" value = "RESET">
+        
+        </form>
+
+    
+    </body>
+    
+    </html>

@@ -1,0 +1,7 @@
+/users/abrick/pr/231/2651/7c.py - Not the easiest to follow. Hard to confirm the values are the same from the results. Verbose output still doesn't clarify. Seems to work though.
+/users/abrick/pr/231/2651/js.py - Tests are way too complicated. Like how you used a function to run all the other functions using cProfile. Works as required.
+/users/abrick/pr/231/2651/ig.py - Fast and effective. Would be nice to show result of both functions to prove same value. Saw someone else nestle both test functions under another function and that call that using cProfile to run them together.
+/users/abrick/pr/231/2651/6k.py - Very good. Had an issue myself running both functions using main, glad you figured it out. Code looks very pythonic. Good job!
+/users/abrick/pr/231/2651/47.py - Output is a little messay. Hard to tell what is hapenning in a small screen and if you met the requirement. Not clear at all.
+/users/abrick/pr/231/2651/4i.py - Code either does not work or output takes forever to load. Can't tell if code works. 
+/users/abrick/pr/231/2651/jk.py - Appreciate the heads up about the delay. Code works and apprecaite you listing results to confirm equal values. Output is kind of messy and takes forever to load. 

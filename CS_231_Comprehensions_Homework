@@ -1,0 +1,3 @@
+#write a program only one statement long (it can span multiple lines) that prints the number of palindromes in /users/abrick/resources/english
+
+open ("/users/abrick/resources/english","r")
